@@ -130,7 +130,7 @@
                     <div class="mb-8">
                         <h2 class="font-oswald text-2xl font-bold text-gray-800 mb-4">Quick Links</h2>
                         <div class="flex flex-col gap-3">
-                            <a href="#" class="inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg transition-all text-center">View Menu</a>
+                            <button id="view-menu-btn" class="inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg transition-all text-center cursor-pointer">View Menu</button>
                             <a href="#" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all text-center"><i data-lucide="shopping-cart" class="w-4 h-4 inline mr-2"></i> Order Online</a>
                             <a href="#" class="inline-block bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-6 rounded-lg transition-all text-center"><i data-lucide="utensils" class="w-4 h-4 inline mr-2"></i> Catering</a>
                             <a href="https://www.facebook.com/profile.php?id=100063717936123" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-6 rounded-lg transition-all">
@@ -226,6 +226,29 @@
         <i data-lucide="chevron-up" class="w-6 h-6"></i>
     </button>
 
+    <!-- Menu Modal -->
+    <div id="menu-modal" class="fixed inset-0 bg-black/90 z-[100] hidden items-center justify-center p-4">
+        <button id="close-modal" class="absolute top-4 right-4 w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all z-10">
+            <i data-lucide="x" class="w-6 h-6 text-white"></i>
+        </button>
+        
+        <button id="prev-menu" class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all z-10">
+            <i data-lucide="chevron-left" class="w-6 h-6 text-white"></i>
+        </button>
+        
+        <button id="next-menu" class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all z-10">
+            <i data-lucide="chevron-right" class="w-6 h-6 text-white"></i>
+        </button>
+        
+        <div class="max-w-4xl w-full max-h-[90vh] overflow-auto">
+            <img id="menu-image" src="" alt="Menu" class="w-full h-auto" />
+        </div>
+        
+        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 text-white text-sm">
+            Page <span id="current-page">1</span> of <span id="total-pages">2</span>
+        </div>
+    </div>
+
     <!-- Scripts -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
@@ -254,6 +277,77 @@
         if (mobileMenuClose) mobileMenuClose.addEventListener('click', closeMobileMenu);
         document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && body.classList.contains('mobile-menu-active')) closeMobileMenu(); });
         window.addEventListener('resize', () => { if (window.innerWidth >= 768 && body.classList.contains('mobile-menu-active')) closeMobileMenu(); });
+
+        // Menu Modal
+        const menuImages = [
+            'images/Dine-In-Menu-website-print-9.2025-1-scaled.jpg',
+            'images/Dine-In-Menu-website-print-9.2025-2-scaled.jpg'
+        ];
+        let currentMenuIndex = 0;
+        
+        const menuModal = document.getElementById('menu-modal');
+        const menuImage = document.getElementById('menu-image');
+        const viewMenuBtn = document.getElementById('view-menu-btn');
+        const closeModalBtn = document.getElementById('close-modal');
+        const prevMenuBtn = document.getElementById('prev-menu');
+        const nextMenuBtn = document.getElementById('next-menu');
+        const currentPageSpan = document.getElementById('current-page');
+        
+        function showMenu(index) {
+            currentMenuIndex = index;
+            menuImage.src = menuImages[index];
+            currentPageSpan.textContent = index + 1;
+            
+            // Update button states
+            prevMenuBtn.style.opacity = index === 0 ? '0.5' : '1';
+            prevMenuBtn.style.pointerEvents = index === 0 ? 'none' : 'auto';
+            nextMenuBtn.style.opacity = index === menuImages.length - 1 ? '0.5' : '1';
+            nextMenuBtn.style.pointerEvents = index === menuImages.length - 1 ? 'none' : 'auto';
+        }
+        
+        viewMenuBtn.addEventListener('click', () => {
+            menuModal.classList.remove('hidden');
+            menuModal.classList.add('flex');
+            showMenu(0);
+            lucide.createIcons();
+        });
+        
+        closeModalBtn.addEventListener('click', () => {
+            menuModal.classList.add('hidden');
+            menuModal.classList.remove('flex');
+        });
+        
+        prevMenuBtn.addEventListener('click', () => {
+            if (currentMenuIndex > 0) {
+                showMenu(currentMenuIndex - 1);
+            }
+        });
+        
+        nextMenuBtn.addEventListener('click', () => {
+            if (currentMenuIndex < menuImages.length - 1) {
+                showMenu(currentMenuIndex + 1);
+            }
+        });
+        
+        // Close modal on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !menuModal.classList.contains('hidden')) {
+                menuModal.classList.add('hidden');
+                menuModal.classList.remove('flex');
+            }
+            if (!menuModal.classList.contains('hidden')) {
+                if (e.key === 'ArrowLeft') prevMenuBtn.click();
+                if (e.key === 'ArrowRight') nextMenuBtn.click();
+            }
+        });
+        
+        // Close modal on background click
+        menuModal.addEventListener('click', (e) => {
+            if (e.target === menuModal) {
+                menuModal.classList.add('hidden');
+                menuModal.classList.remove('flex');
+            }
+        });
     </script>
 </body>
 </html>
