@@ -1,22 +1,19 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Red River BBQ & Grill - Authentic Texas Bar-B-Que Since 2002</title>
-    <meta name="description" content="Red River BBQ & Grill serves authentic Texas BBQ in League City, TX. Family-friendly dining with smoked meats, homestyle sides, and catering services.">
-    <link rel="canonical" href="https://redriverbbq.com/">
+    <title>Party Room - Red River BBQ & Grill | Private Events & Catering</title>
+    <meta name="description" content="Reserve the Red River BBQ & Grill Party Room for your next private event. Perfect for birthdays, corporate events, and celebrations with authentic Texas BBQ catering.">
+    <link rel="canonical" href="https://redriverbbq.com/party-room.html">
     
-    <!-- Schema.org Restaurant Markup -->
+    <!-- Schema.org Event Venue Markup -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "Restaurant",
-        "@id": "https://redriverbbq.com/#restaurant",
-        "name": "Red River BBQ & Grill",
-        "url": "https://redriverbbq.com/",
-        "telephone": "+12813328086",
+        "@type": "EventVenue",
+        "name": "Red River BBQ & Grill Party Room",
+        "url": "https://redriverbbq.com/party-room.html",
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "1911 E. Main St.",
@@ -25,37 +22,11 @@
             "postalCode": "77573",
             "addressCountry": "US"
         },
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 29.4952,
-            "longitude": -95.0863
-        },
-        "openingHoursSpecification": [
-            {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"],
-                "opens": "11:00",
-                "closes": "21:00"
-            },
-            {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Friday", "Saturday"],
-                "opens": "11:00",
-                "closes": "21:30"
-            }
-        ],
-        "servesCuisine": ["BBQ", "Barbecue", "Texas BBQ", "American"],
-        "priceRange": "$$",
-        "hasMenu": "https://redriverbbq.com/menu.html",
-        "acceptsReservations": "false",
-        "menu": "https://redriverbbq.com/menu.html",
-        "image": [
-            "https://redriverbbq.com/images/RRBBQBrand.png",
-            "https://redriverbbq.com/images/RedRiverBBQ&Grill-BBQ.jpg"
-        ],
-        "sameAs": [
-            "https://www.facebook.com/profile.php?id=100063717936123"
-        ]
+        "telephone": "+12813328086",
+        "parentOrganization": {
+            "@type": "Restaurant",
+            "@id": "https://redriverbbq.com/#restaurant"
+        }
     }
     </script>
     
@@ -79,25 +50,6 @@
             background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.05) 10px, rgba(255,255,255,0.05) 20px);
             background-color: #222;
         }
-        /* Custom jagged edge styling for the divider */
-        .jagged-divider {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            overflow: hidden;
-            line-height: 0;
-        }
-        .jagged-divider svg {
-            position: relative;
-            display: block;
-            width: 100%;
-            height: 60px;
-        }
-        .jagged-divider path {
-            fill: #222;
-        }
-        /* Hide scrollbar for cleaner look */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -109,7 +61,6 @@
             border-radius: 4px;
         }
         
-        /* Modern Animations */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -140,63 +91,6 @@
                 transform: scale(1);
             }
         }
-        @keyframes slideInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-        @keyframes slideInRight {
-            from {
-                opacity: 0;
-                transform: translateX(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-        @keyframes pulse-glow {
-            0%, 100% {
-                box-shadow: 0 0 20px rgba(204, 0, 0, 0.4);
-            }
-            50% {
-                box-shadow: 0 0 40px rgba(204, 0, 0, 0.8), 0 0 60px rgba(204, 0, 0, 0.4);
-            }
-        }
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-        @keyframes shimmer {
-            0% {
-                background-position: -200% 0;
-            }
-            100% {
-                background-position: 200% 0;
-            }
-        }
-        @keyframes smoke {
-            0% {
-                opacity: 0;
-                transform: translateY(0) scale(1);
-            }
-            50% {
-                opacity: 0.3;
-            }
-            100% {
-                opacity: 0;
-                transform: translateY(-100px) scale(2);
-            }
-        }
         
         .animate-fadeInUp {
             animation: fadeInUp 0.8s ease-out forwards;
@@ -207,42 +101,20 @@
         .animate-scaleIn {
             animation: scaleIn 0.6s ease-out forwards;
         }
-        .animate-slideInLeft {
-            animation: slideInLeft 0.8s ease-out forwards;
-        }
-        .animate-slideInRight {
-            animation: slideInRight 0.8s ease-out forwards;
-        }
-        .animate-float {
-            animation: float 3s ease-in-out infinite;
-        }
-        .animate-pulse-glow {
-            animation: pulse-glow 2s ease-in-out infinite;
-        }
         
-        /* Delay utilities */
         .delay-100 { animation-delay: 0.1s; }
         .delay-200 { animation-delay: 0.2s; }
         .delay-300 { animation-delay: 0.3s; }
         .delay-400 { animation-delay: 0.4s; }
         .delay-500 { animation-delay: 0.5s; }
-        .delay-600 { animation-delay: 0.6s; }
         
-        /* Glassmorphism */
         .glass {
             background: rgba(0, 0, 0, 0.4);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
-        .glass-light {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
         
-        /* Modern button styles */
         .btn-modern {
             position: relative;
             overflow: hidden;
@@ -267,6 +139,72 @@
             box-shadow: 0 10px 30px rgba(204, 0, 0, 0.4);
         }
         
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #eab308, #f59e0b);
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .menu-open .hamburger-line:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+        .menu-open .hamburger-line:nth-child(2) {
+            opacity: 0;
+            transform: translateX(-10px);
+        }
+        .menu-open .hamburger-line:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+        
+        .mobile-menu-active {
+            overflow: hidden;
+        }
+        .mobile-menu-active #mobile-menu-overlay {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .mobile-menu-active #mobile-menu {
+            transform: translateX(0);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Gradient borders */
+        .gradient-border {
+            position: relative;
+        }
+        .gradient-border::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            padding: 2px;
+            background: linear-gradient(135deg, #cc0000, #eab308, #cc0000);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+        }
+
         .btn-outline-modern {
             position: relative;
             overflow: hidden;
@@ -291,120 +229,13 @@
             color: #1a1a1a;
             transform: scale(1.05);
         }
-        
-        /* Nav link hover effect */
-        .nav-link {
-            position: relative;
-        }
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, #eab308, #f59e0b);
-            transition: width 0.3s ease;
-        }
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        
-        /* Card hover effects */
+
         .card-hover {
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .card-hover:hover {
             transform: translateY(-8px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-        }
-        
-        /* Hero parallax image */
-        .hero-image {
-            transition: transform 0.1s ease-out;
-        }
-        
-        /* Smoke effect elements */
-        .smoke {
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-            border-radius: 50%;
-            animation: smoke 4s ease-out infinite;
-        }
-        
-        /* Shimmer text effect */
-        .shimmer-text {
-            background: linear-gradient(90deg, #cc0000 0%, #ff4444 25%, #cc0000 50%, #ff4444 75%, #cc0000 100%);
-            background-size: 200% auto;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: shimmer 3s linear infinite;
-        }
-        
-        /* Location card styles */
-        .location-card {
-            transition: all 0.3s ease;
-        }
-        .location-card:hover {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 12px;
-            padding: 16px;
-            margin: -16px;
-        }
-        
-        /* Scroll reveal */
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        /* Gradient borders */
-        .gradient-border {
-            position: relative;
-        }
-        .gradient-border::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            border-radius: inherit;
-            padding: 2px;
-            background: linear-gradient(135deg, #cc0000, #eab308, #cc0000);
-            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            -webkit-mask-composite: xor;
-            mask-composite: exclude;
-        }
-        
-        /* Mobile Menu Hamburger Animation */
-        .menu-open .hamburger-line:nth-child(1) {
-            transform: rotate(45deg) translate(6px, 6px);
-        }
-        .menu-open .hamburger-line:nth-child(2) {
-            opacity: 0;
-            transform: translateX(-10px);
-        }
-        .menu-open .hamburger-line:nth-child(3) {
-            transform: rotate(-45deg) translate(6px, -6px);
-        }
-        
-        /* Mobile menu open state */
-        .mobile-menu-active {
-            overflow: hidden;
-        }
-        .mobile-menu-active #mobile-menu-overlay {
-            opacity: 1;
-            pointer-events: auto;
-        }
-        .mobile-menu-active #mobile-menu {
-            transform: translateX(0);
         }
     </style>
 </head>
@@ -432,13 +263,12 @@
 
         <!-- Main Branding Bar -->
         <div class="chalkboard-texture py-3 md:py-6 px-4 shadow-2xl relative overflow-hidden">
-            <!-- Subtle animated background glow -->
             <div class="absolute inset-0 bg-gradient-to-r from-transparent via-red-900/10 to-transparent opacity-50"></div>
             
             <div class="max-w-7xl mx-auto flex justify-between items-center relative z-10">
                 <!-- Logo Section -->
                 <div class="flex items-center animate-fadeInDown">
-                    <a href="#" class="group cursor-pointer">
+                    <a href="index.html" class="group cursor-pointer">
                         <img 
                             src="images/RRBBQBrand.png" 
                             alt="Red River BBQ & Grill" 
@@ -461,7 +291,7 @@
                 <!-- Desktop Navigation Section -->
                 <nav class="hidden md:flex flex-col items-end animate-fadeInDown delay-200" style="opacity: 0; animation-fill-mode: forwards;">
                     <ul class="flex gap-x-6 text-white font-oswald font-bold uppercase text-base tracking-wide">
-                        <li><a href="#location" class="nav-link hover:text-yellow-400 transition-all duration-300">LOCATION</a></li>
+                        <li><a href="index.html#location" class="nav-link hover:text-yellow-400 transition-all duration-300">LOCATION</a></li>
                         <li><a href="menu.html" class="nav-link hover:text-yellow-400 transition-all duration-300">MENU</a></li>
                         <li><a href="https://kiershcateringevents.com/" target="_blank" rel="noopener noreferrer" class="nav-link hover:text-yellow-400 transition-all duration-300">CATERING</a></li>
                         <li><a href="party-room.html" class="nav-link hover:text-yellow-400 transition-all duration-300">PARTY ROOM</a></li>
@@ -499,7 +329,7 @@
             <!-- Main Navigation -->
             <ul class="space-y-1">
                 <li>
-                    <a href="#location" class="flex items-center gap-3 px-4 py-3 text-white font-oswald font-bold uppercase tracking-wide rounded-lg hover:bg-white/10 transition-all">
+                    <a href="index.html#location" class="flex items-center gap-3 px-4 py-3 text-white font-oswald font-bold uppercase tracking-wide rounded-lg hover:bg-white/10 transition-all">
                         <i data-lucide="map-pin" class="w-5 h-5 text-red-500"></i>
                         Location
                     </a>
@@ -584,98 +414,233 @@
 
     <main class="flex-grow">
         <!-- HERO SECTION -->
-        <section class="relative h-[400px] md:h-[700px] w-full overflow-hidden" id="hero">
-            <!-- Parallax Background Image -->
-            <img 
-                src="images/Red%20River%20BBQ%20%26%20Grill%20Hero%20image%20food.png" 
-                alt="Red River BBQ & Grill Delicious Food" 
-                class="hero-image w-full h-full object-cover scale-110"
-                id="hero-image"
-            />
+        <section class="relative h-[300px] md:h-[500px] w-full overflow-hidden">
+            <!-- Gradient Background -->
+            <div class="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] via-[#2a2a2a] to-[#1a1a1a]"></div>
+            <div class="absolute inset-0 diagonal-stripes opacity-30"></div>
             
-            <!-- Gradient Overlay -->
-            <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/70"></div>
-            <div class="absolute inset-0 bg-gradient-to-r from-red-900/30 via-transparent to-red-900/30"></div>
-            
-            <!-- Animated Smoke Effects -->
-            <div class="smoke" style="left: 20%; bottom: 30%; animation-delay: 0s;"></div>
-            <div class="smoke" style="left: 50%; bottom: 20%; animation-delay: 1s;"></div>
-            <div class="smoke" style="left: 75%; bottom: 25%; animation-delay: 2s;"></div>
-            
-            <!-- Hero Content -->
-            <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-                <div class="animate-fadeInUp">
-                    <span class="text-yellow-400 font-oswald text-sm md:text-lg uppercase tracking-[0.3em] mb-2 block">Welcome to</span>
+            <!-- Content -->
+            <div class="relative z-10 h-full flex items-center justify-center text-center px-4">
+                <div class="max-w-4xl mx-auto">
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-oswald font-bold text-white mb-4 animate-fadeInDown">
+                        PARTY ROOM
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-300 animate-fadeInUp delay-200">
+                        Host Your Next Event with Authentic Texas BBQ
+                    </p>
                 </div>
-                <h2 class="text-white text-5xl md:text-8xl font-oswald font-black uppercase leading-none mb-4 animate-fadeInUp delay-100" style="opacity: 0; animation-fill-mode: forwards; text-shadow: 4px 4px 8px rgba(0,0,0,0.5);">
-                    Red River <span class="text-[#cc0000]">BBQ</span>
-                </h2>
-                <p class="text-white/90 text-lg md:text-2xl font-light max-w-2xl mb-8 animate-fadeInUp delay-200" style="opacity: 0; animation-fill-mode: forwards;">
-                    Authentic Texas Bar-B-Que Since 2002
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 animate-fadeInUp delay-300" style="opacity: 0; animation-fill-mode: forwards;">
-                    <button onclick="openOrderModal()" class="btn-modern px-8 py-4 text-white font-oswald font-bold uppercase tracking-wider rounded-lg animate-pulse-glow">
-                        Order Online Now
-                    </button>
-                    <a href="#about" class="btn-outline-modern px-8 py-4 text-white font-oswald font-bold uppercase tracking-wider rounded-lg relative z-10">
-                        Our Story
+            </div>
+        </section>
+
+        <!-- INTRO CONTENT SECTION -->
+        <section class="py-16 px-4 bg-white">
+            <div class="max-w-4xl mx-auto">
+                <div class="space-y-6 text-gray-700 text-lg leading-relaxed reveal">
+                    <p>
+                        Welcome to the Red River BBQ & Grill Party Room! Whether you're celebrating a birthday, hosting a corporate event, or gathering with friends and family, our private party room is the perfect venue for your special occasion. With authentic Texas BBQ and a warm, welcoming atmosphere, we make every event memorable.
+                    </p>
+                    <p>
+                        Our party room can accommodate groups of various sizes and offers a comfortable, private space for your guests to enjoy. We provide flexible catering options to suit your needs, from our famous smoked meats to delicious sides and desserts. Let us handle the food while you focus on celebrating with your loved ones.
+                    </p>
+                    <p>
+                        Ready to book your event? Contact us at <a href="tel:+12813328086" class="text-[#cc0000] hover:text-[#880000] font-bold">(281) 332-8086</a> or visit us at 1911 E. Main St., League City, TX to discuss your party room reservation. We look forward to making your event a success!
+                    </p>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="mt-12 text-center reveal">
+                    <a href="https://kiershcateringevents.com/" target="_blank" rel="noopener noreferrer" class="inline-block btn-modern text-white font-oswald font-bold uppercase text-lg px-8 py-4 rounded-lg shadow-xl">
+                        <i data-lucide="calendar" class="inline-block w-5 h-5 mr-2"></i>
+                        Book Your Event
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- ABOUT SECTION -->
-        <section class="bg-gradient-to-b from-white to-gray-50 py-20 px-4 relative overflow-hidden" id="about">
-            <!-- Decorative elements -->
-            <div class="absolute top-0 left-0 w-64 h-64 bg-red-100 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl opacity-50"></div>
-            <div class="absolute bottom-0 right-0 w-96 h-96 bg-yellow-100 rounded-full translate-x-1/2 translate-y-1/2 blur-3xl opacity-50"></div>
-            
-            <div class="max-w-5xl mx-auto text-center relative z-10">
-                <div class="reveal">
-                    <span class="text-red-600 font-oswald text-sm uppercase tracking-[0.3em] mb-4 block">Our Heritage</span>
-                    <h2 class="text-gray-800 text-4xl md:text-5xl font-oswald font-bold uppercase tracking-tight mb-4 relative inline-block">
-                        LOCAL FAVORITE SINCE 2002
+        <!-- PARTY ROOM MENU SECTION -->
+        <section class="py-16 px-4 bg-gray-50">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12 reveal">
+                    <h2 class="text-4xl md:text-5xl font-oswald font-bold text-gray-900 mb-4">
+                        PARTY ROOM MENU
                     </h2>
-                    <div class="h-1 bg-gradient-to-r from-transparent via-yellow-500 to-transparent w-48 mx-auto mb-8"></div>
+                    <p class="text-lg text-gray-600">
+                        Choose from our delicious catering options
+                    </p>
                 </div>
-                
-                <p class="reveal text-gray-600 leading-relaxed text-lg md:text-xl mb-10 max-w-3xl mx-auto">
-                    Our original location in League City since 2002. We offer a family friendly dining experience with a large dining room, private banquet rooms, outdoor dining and a play area for kids to enjoy. Come enjoy some Texas bar-b-que and home cooking! We also offer catering for any type of event & size. See our catering menu for more details. See you soon!
-                </p>
-                
-                <!-- Feature Cards -->
-                <div class="reveal grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-                    <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-                        <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-700 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
-                            <i data-lucide="flame" class="w-8 h-8 text-white"></i>
-                        </div>
-                        <h3 class="font-oswald text-xl font-bold text-gray-800 mb-3">Slow Smoked</h3>
-                        <p class="text-gray-600 text-sm">Our meats are smoked low and slow over real Texas post oak wood for that authentic flavor.</p>
-                    </div>
+
+                <!-- Texas Bar-B-Que Meals -->
+                <div class="mb-12 reveal">
+                    <h3 class="text-3xl font-oswald font-bold text-[#cc0000] mb-6 border-b-4 border-[#cc0000] pb-2 inline-block">
+                        TEXAS BAR-B-QUE MEALS
+                    </h3>
+                    <p class="text-gray-600 mb-6 italic">All meals include choice of 2 sides, pickles, onions & jalapenos</p>
                     
-                    <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-                        <div class="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
-                            <i data-lucide="users" class="w-8 h-8 text-white"></i>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <!-- Slim -->
+                        <div class="bg-white rounded-lg shadow-lg p-6 border-t-4 border-[#cc0000]">
+                            <h4 class="text-2xl font-oswald font-bold text-gray-900 mb-3">THE SLIM</h4>
+                            <p class="text-gray-700 mb-4">1 Meat</p>
+                            <div class="space-y-2 text-gray-600">
+                                <p>10-14 people: <span class="font-bold text-[#cc0000]">$145</span></p>
+                                <p>15-19 people: <span class="font-bold text-[#cc0000]">$195</span></p>
+                                <p>20-24 people: <span class="font-bold text-[#cc0000]">$245</span></p>
+                                <p>25-29 people: <span class="font-bold text-[#cc0000]">$285</span></p>
+                                <p>30+ people: <span class="font-bold text-[#cc0000]">$9.50/person</span></p>
+                            </div>
                         </div>
-                        <h3 class="font-oswald text-xl font-bold text-gray-800 mb-3">Family Owned</h3>
-                        <p class="text-gray-600 text-sm">A family tradition serving the community with love and dedication for over 20 years.</p>
+
+                        <!-- The Boss -->
+                        <div class="bg-white rounded-lg shadow-lg p-6 border-t-4 border-[#cc0000]">
+                            <h4 class="text-2xl font-oswald font-bold text-gray-900 mb-3">THE BOSS</h4>
+                            <p class="text-gray-700 mb-4">2 Meats</p>
+                            <div class="space-y-2 text-gray-600">
+                                <p>10-14 people: <span class="font-bold text-[#cc0000]">$175</span></p>
+                                <p>15-19 people: <span class="font-bold text-[#cc0000]">$235</span></p>
+                                <p>20-24 people: <span class="font-bold text-[#cc0000]">$295</span></p>
+                                <p>25-29 people: <span class="font-bold text-[#cc0000]">$345</span></p>
+                                <p>30+ people: <span class="font-bold text-[#cc0000]">$11.50/person</span></p>
+                            </div>
+                        </div>
+
+                        <!-- Trail Blazer -->
+                        <div class="bg-white rounded-lg shadow-lg p-6 border-t-4 border-[#cc0000]">
+                            <h4 class="text-2xl font-oswald font-bold text-gray-900 mb-3">THE TRAIL BLAZER</h4>
+                            <p class="text-gray-700 mb-4">3 Meats</p>
+                            <div class="space-y-2 text-gray-600">
+                                <p>10-14 people: <span class="font-bold text-[#cc0000]">$205</span></p>
+                                <p>15-19 people: <span class="font-bold text-[#cc0000]">$275</span></p>
+                                <p>20-24 people: <span class="font-bold text-[#cc0000]">$345</span></p>
+                                <p>25-29 people: <span class="font-bold text-[#cc0000]">$405</span></p>
+                                <p>30+ people: <span class="font-bold text-[#cc0000]">$13.50/person</span></p>
+                            </div>
+                        </div>
                     </div>
+                </div>
+
+                <!-- Heavy Hors d'oeuvres -->
+                <div class="mb-12 reveal">
+                    <h3 class="text-3xl font-oswald font-bold text-[#cc0000] mb-6 border-b-4 border-[#cc0000] pb-2 inline-block">
+                        HEAVY HORS D'OEUVRES
+                    </h3>
+                    <p class="text-gray-600 mb-6">Perfect for cocktail-style gatherings</p>
                     
-                    <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-                        <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-700 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
-                            <i data-lucide="leaf" class="w-8 h-8 text-white"></i>
+                    <div class="bg-white rounded-lg shadow-lg p-8">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-900 mb-4">Choose Your Items:</h4>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li class="flex items-start">
+                                        <i data-lucide="check" class="w-5 h-5 text-[#cc0000] mr-2 mt-0.5"></i>
+                                        <span>BBQ Sliders (Brisket, Pulled Pork, or Sausage)</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i data-lucide="check" class="w-5 h-5 text-[#cc0000] mr-2 mt-0.5"></i>
+                                        <span>Smoked Chicken Wings</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i data-lucide="check" class="w-5 h-5 text-[#cc0000] mr-2 mt-0.5"></i>
+                                        <span>Mini Baked Potatoes with Toppings</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i data-lucide="check" class="w-5 h-5 text-[#cc0000] mr-2 mt-0.5"></i>
+                                        <span>BBQ Nachos</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i data-lucide="check" class="w-5 h-5 text-[#cc0000] mr-2 mt-0.5"></i>
+                                        <span>Stuffed Jalapenos</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i data-lucide="check" class="w-5 h-5 text-[#cc0000] mr-2 mt-0.5"></i>
+                                        <span>Fried Pickles</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-900 mb-4">Pricing:</h4>
+                                <div class="space-y-3 text-gray-700">
+                                    <p class="text-lg">
+                                        Choose 3 items: <span class="font-bold text-[#cc0000] text-xl">$8.50/person</span>
+                                    </p>
+                                    <p class="text-lg">
+                                        Choose 4 items: <span class="font-bold text-[#cc0000] text-xl">$10.50/person</span>
+                                    </p>
+                                    <p class="text-sm text-gray-600 mt-4 italic">
+                                        *Minimum 20 people required for hors d'oeuvres packages
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                        <h3 class="font-oswald text-xl font-bold text-gray-800 mb-3">Fresh Daily</h3>
-                        <p class="text-gray-600 text-sm">We prepare everything fresh daily with locally sourced ingredients whenever possible.</p>
                     </div>
+                </div>
+
+                <!-- Desserts -->
+                <div class="reveal">
+                    <h3 class="text-3xl font-oswald font-bold text-[#cc0000] mb-6 border-b-4 border-[#cc0000] pb-2 inline-block">
+                        DESSERTS
+                    </h3>
+                    <p class="text-gray-600 mb-6">Add something sweet to your celebration</p>
+                    
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="bg-white rounded-lg shadow-lg p-6">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Peach Cobbler</h4>
+                            <p class="text-2xl font-bold text-[#cc0000]">$3.50/person</p>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-lg p-6">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Banana Pudding</h4>
+                            <p class="text-2xl font-bold text-[#cc0000]">$3.50/person</p>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-lg p-6">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Chocolate Cake</h4>
+                            <p class="text-2xl font-bold text-[#cc0000]">$3.50/person</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Info -->
+                <div class="mt-12 bg-gradient-to-r from-[#cc0000] to-[#880000] text-white rounded-lg p-8 reveal">
+                    <h3 class="text-2xl font-oswald font-bold mb-4">ADDITIONAL INFORMATION</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i data-lucide="info" class="w-5 h-5 mr-3 mt-0.5"></i>
+                            <span>48-hour advance notice required for all party room bookings</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="info" class="w-5 h-5 mr-3 mt-0.5"></i>
+                            <span>Plates, utensils, and napkins provided with all orders</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="info" class="w-5 h-5 mr-3 mt-0.5"></i>
+                            <span>Delivery available for large orders (additional fee applies)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="info" class="w-5 h-5 mr-3 mt-0.5"></i>
+                            <span>Customized menus available - contact us to discuss your needs</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
+        </section>
 
-            <!-- Jagged Divider -->
-            <div class="jagged-divider">
-                <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5,73.84-4.36,147.54,16.88,218.2,35.26,69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-1.42,1200,34.33V0Z"></path>
-                </svg>
+        <!-- CONTACT CTA SECTION -->
+        <section class="py-16 px-4 bg-[#1a1a1a] text-white">
+            <div class="max-w-4xl mx-auto text-center reveal">
+                <h2 class="text-4xl md:text-5xl font-oswald font-bold mb-6">
+                    READY TO BOOK?
+                </h2>
+                <p class="text-xl text-gray-300 mb-8">
+                    Contact us today to reserve the party room for your next event
+                </p>
+                <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+                    <a href="tel:+12813328086" class="btn-modern text-white font-oswald font-bold uppercase text-lg px-8 py-4 rounded-lg shadow-xl inline-block">
+                        <i data-lucide="phone" class="inline-block w-5 h-5 mr-2"></i>
+                        (281) 332-8086
+                    </a>
+                    <a href="https://kiershcateringevents.com/" target="_blank" rel="noopener noreferrer" class="btn-modern text-white font-oswald font-bold uppercase text-lg px-8 py-4 rounded-lg shadow-xl inline-block">
+                        <i data-lucide="external-link" class="inline-block w-5 h-5 mr-2"></i>
+                        Catering Website
+                    </a>
+                </div>
             </div>
         </section>
     </main>
@@ -739,7 +704,7 @@
         <div class="reveal mt-20 flex justify-center items-center border-t border-white/10 pt-16">
             <!-- Main BBQ Logo -->
             <div class="flex flex-col items-center group cursor-pointer">
-                <a href="#" class="transition-all duration-500 group-hover:scale-110 group-hover:drop-shadow-[0_0_30px_rgba(220,38,38,0.5)]">
+                <a href="index.html" class="transition-all duration-500 group-hover:scale-110 group-hover:drop-shadow-[0_0_30px_rgba(220,38,38,0.5)]">
                     <img 
                         src="images/RRBBQBrand.png" 
                         alt="Red River BBQ & Grill" 
@@ -803,80 +768,34 @@
         </div>
     </div>
 
-    <!-- SCROLL TO TOP BUTTON -->
-    <button 
-        id="scroll-to-top"
-        class="fixed bottom-8 right-4 md:right-8 w-12 h-12 bg-gradient-to-br from-red-600 to-red-800 text-white rounded-full shadow-lg hover:shadow-red-500/50 transition-all duration-300 opacity-0 pointer-events-none translate-y-4 flex items-center justify-center hover:scale-110 z-50"
-        title="Go to top"
-    >
-        <i data-lucide="chevron-up" class="w-6 h-6"></i>
-    </button>
-
-    <!-- SCRIPTS -->
+    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
-        // Initialize Lucide icons
         lucide.createIcons();
 
         // ===== Order Modal Functions =====
         function openOrderModal() {
-            const modal = document.getElementById('orderModal');
-            modal.classList.remove('hidden');
-            lucide.createIcons();
+            document.getElementById('orderModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            // Re-initialize icons in modal
+            setTimeout(() => lucide.createIcons(), 50);
         }
 
         function closeOrderModal() {
-            const modal = document.getElementById('orderModal');
-            modal.classList.add('hidden');
+            document.getElementById('orderModal').classList.add('hidden');
+            document.body.style.overflow = '';
         }
 
-        // Close modal when pressing Escape
+        // Close modal on escape key
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
                 closeOrderModal();
             }
         });
 
-        // ===== Scroll to Top Logic =====
-        const scrollBtn = document.getElementById('scroll-to-top');
-        
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                scrollBtn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
-                scrollBtn.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
-            } else {
-                scrollBtn.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
-                scrollBtn.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
-            }
-        });
-
-        scrollBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-
-        // ===== Parallax Effect for Hero Image =====
-        const heroImage = document.getElementById('hero-image');
-        const hero = document.getElementById('hero');
-        
-        window.addEventListener('scroll', () => {
-            if (hero) {
-                const scrolled = window.scrollY;
-                const heroHeight = hero.offsetHeight;
-                
-                if (scrolled < heroHeight) {
-                    const parallaxValue = scrolled * 0.4;
-                    heroImage.style.transform = `scale(1.1) translateY(${parallaxValue}px)`;
-                }
-            }
-        });
-
         // ===== Scroll Reveal Animation =====
-        const revealElements = document.querySelectorAll('.reveal');
-        
         const revealOnScroll = () => {
+            const revealElements = document.querySelectorAll('.reveal');
             const windowHeight = window.innerHeight;
             const revealPoint = 100;
             
@@ -892,56 +811,6 @@
         window.addEventListener('scroll', revealOnScroll);
         window.addEventListener('load', revealOnScroll);
 
-        // ===== Header Shrink on Scroll =====
-        const header = document.querySelector('header');
-        let lastScrollY = 0;
-        
-        window.addEventListener('scroll', () => {
-            const currentScrollY = window.scrollY;
-            
-            if (currentScrollY > 100) {
-                header.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.3)';
-            } else {
-                header.style.boxShadow = 'none';
-            }
-            
-            lastScrollY = currentScrollY;
-        });
-
-        // ===== Smooth Scroll for Anchor Links =====
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // ===== Add entrance animations on page load =====
-        document.addEventListener('DOMContentLoaded', () => {
-            // Trigger reveal for elements already in view
-            setTimeout(revealOnScroll, 100);
-        });
-
-        // ===== Interactive Cursor Effect (subtle glow on cards) =====
-        const cards = document.querySelectorAll('.card-hover');
-        
-        cards.forEach(card => {
-            card.addEventListener('mousemove', (e) => {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                
-                card.style.setProperty('--mouse-x', `${x}px`);
-                card.style.setProperty('--mouse-y', `${y}px`);
-            });
-        });
-
         // ===== Mobile Menu Toggle =====
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenuClose = document.getElementById('mobile-menu-close');
@@ -952,7 +821,6 @@
         const openMobileMenu = () => {
             body.classList.add('mobile-menu-active');
             mobileMenuBtn.classList.add('menu-open');
-            // Re-initialize icons in mobile menu
             lucide.createIcons();
         };
 
@@ -982,6 +850,11 @@
             if (window.innerWidth >= 768 && body.classList.contains('mobile-menu-active')) {
                 closeMobileMenu();
             }
+        });
+
+        // Trigger reveal for elements already in view
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(revealOnScroll, 100);
         });
     </script>
 </body>
