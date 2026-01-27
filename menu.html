@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu • Red River BBQ & Grill</title>
+    <meta name="description" content="Red River BBQ & Grill menu - featuring slow-smoked Texas BBQ, ribs, brisket, pulled pork, chicken, and homestyle sides.">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Open Sans', sans-serif; background: #f5f5f5; }
+        header { background: #000; padding: 1rem 2rem; position: sticky; top: 0; z-index: 50; }
+        nav { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { height: 60px; }
+        .nav-links { list-style: none; display: flex; gap: 2rem; }
+        .nav-link { color: white; text-transform: uppercase; font-family: 'Oswald', sans-serif; text-decoration: none; transition: color 0.3s; }
+        .nav-link:hover { color: #facc15; }
+        .nav-link.active { color: #facc15; }
+        main { max-width: 1000px; margin: 0 auto; padding: 3rem 1rem; }
+        .hero { position: relative; height: 300px; overflow: hidden; }
+        .hero-bg { width: 100%; height: 100%; object-fit: cover; }
+        .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.4)); display: flex; align-items: center; justify-content: center; }
+        .hero-content { text-align: center; color: white; }
+        .hero h1 { font-size: 4rem; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; }
+        .hero p { font-size: 1.25rem; margin-top: 1rem; }
+        .menu-category { border-left: 4px solid #cc0000; padding-left: 1rem; margin-bottom: 3rem; }
+        .menu-category h2 { font-size: 2rem; font-weight: bold; text-transform: uppercase; color: #1a1a1a; margin-bottom: 0.5rem; }
+        .menu-category > p { color: #666; margin-bottom: 1.5rem; }
+        .menu-item { background: white; border-radius: 8px; padding: 1rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; transition: all 0.3s; }
+        .menu-item:hover { transform: translateX(5px); background: #fef3c7; }
+        .menu-item h3 { font-size: 1.25rem; font-weight: 600; color: #1a1a1a; }
+        .menu-item p { color: #666; font-size: 0.9rem; }
+        .price-tag { background: linear-gradient(135deg, #cc0000, #dc2626); color: white; padding: 0.5rem 1rem; border-radius: 9999px; font-weight: bold; white-space: nowrap; }
+        .sides-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
+        .side-item { background: white; border-radius: 8px; padding: 1rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; transition: all 0.3s; }
+        .side-item:hover { transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0,0,0,0.15); }
+        .cta-section { background: #cc0000; border-radius: 8px; padding: 3rem 2rem; text-align: center; color: white; margin-top: 3rem; }
+        .cta-section h2 { font-size: 2rem; margin-bottom: 1rem; text-transform: uppercase; }
+        .cta-section p { font-size: 1.25rem; margin-bottom: 2rem; }
+        .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+        .cta-button { padding: 1rem 2rem; border-radius: 8px; font-family: 'Oswald', sans-serif; font-weight: bold; text-transform: uppercase; text-decoration: none; transition: all 0.3s; }
+        .cta-button.pickup { background: white; color: #cc0000; }
+        .cta-button.pickup:hover { background: #f3f4f6; }
+        .cta-button.delivery { background: #eab308; color: #000; }
+        .cta-button.delivery:hover { background: #ca8a04; }
+        footer { background: #000; color: white; padding: 2rem; margin-top: 3rem; text-align: center; }
+        footer img { height: 80px; margin-bottom: 1rem; }
+        footer p { color: #999; margin: 0.5rem 0; }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero h1 { font-size: 2.5rem; }
+            .menu-item { flex-direction: column; text-align: center; gap: 1rem; }
+            .cta-buttons { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html"><img src="images/RRBBQBrand.png" alt="Red River BBQ & Grill" class="logo"></a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="menu.html" class="nav-link active">Menu</a></li>
+                <li><a href="https://kiershcateringevents.com/" target="_blank" rel="noopener noreferrer" class="nav-link">Catering</a></li>
+                <li><a href="order.html" class="nav-link">Order</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <img src="images/RedRiverBBQ&Grill-BBQ.jpg" alt="Red River BBQ Menu" class="hero-bg">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1>Our Menu</h1>
+                <p>Authentic Texas BBQ & Homestyle Cooking</p>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section class="menu-category">
+            <h2>BBQ Plates</h2>
+            <p>All plates served with your choice of two sides and Texas toast</p>
+            <div class="menu-item">
+                <div><h3>Sliced Brisket</h3><p>Premium beef brisket smoked low and slow over Texas post oak</p></div>
+                <span class="price-tag">$16.99</span>
+            </div>
+            <div class="menu-item">
+                <div><h3>Pulled Pork</h3><p>Tender pork shoulder pulled and served with our signature BBQ sauce</p></div>
+                <span class="price-tag">$14.99</span>
+            </div>
+            <div class="menu-item">
+                <div><h3>BBQ Ribs</h3><p>Fall-off-the-bone St. Louis style pork ribs with our house rub</p></div>
+                <span class="price-tag">$17.99</span>
+            </div>
+            <div class="menu-item">
+                <div><h3>1/2 BBQ Chicken</h3><p>Juicy half chicken smoked to perfection</p></div>
+                <span class="price-tag">$12.99</span>
+            </div>
+            <div class="menu-item">
+                <div><h3>Two Meat Combo</h3><p>Choose any two meats from our selection</p></div>
+                <span class="price-tag">$18.99</span>
+            </div>
+            <div class="menu-item">
+                <div><h3>Three Meat Combo</h3><p>Choose any three meats for the ultimate BBQ experience</p></div>
+                <span class="price-tag">$22.99</span>
+            </div>
+        </section>
+
+        <section class="menu-category">
+            <h2>BBQ Sandwiches</h2>
+            <p>Served on a toasted bun with pickles and onions</p>
+            <div class="menu-item">
+                <div><h3>Chopped Brisket Sandwich</h3><p>Chopped beef brisket on a toasted bun</p></div>
+                <span class="price-tag">$10.99</span>
+            </div>
+            <div class="menu-item">
+                <div><h3>Pulled Pork Sandwich</h3><p>Tender pulled pork with coleslaw</p></div>
+                <span class="price-tag">$9.99</span>
+            </div>
+            <div class="menu-item">
+                <div><h3>BBQ Sausage Link</h3><p>Smoked sausage link on a toasted bun</p></div>
+                <span class="price-tag">$8.99</span>
+            </div>
+        </section>
+
+        <section class="menu-category">
+            <h2>Homestyle Sides</h2>
+            <div class="sides-grid">
+                <div class="side-item"><h3>Mac & Cheese</h3><span style="color: #cc0000; font-weight: bold;">$3.99</span></div>
+                <div class="side-item"><h3>Coleslaw</h3><span style="color: #cc0000; font-weight: bold;">$3.99</span></div>
+                <div class="side-item"><h3>BBQ Beans</h3><span style="color: #cc0000; font-weight: bold;">$3.99</span></div>
+                <div class="side-item"><h3>Potato Salad</h3><span style="color: #cc0000; font-weight: bold;">$3.99</span></div>
+                <div class="side-item"><h3>French Fries</h3><span style="color: #cc0000; font-weight: bold;">$3.99</span></div>
+                <div class="side-item"><h3>Onion Rings</h3><span style="color: #cc0000; font-weight: bold;">$4.99</span></div>
+                <div class="side-item"><h3>Green Beans</h3><span style="color: #cc0000; font-weight: bold;">$3.99</span></div>
+                <div class="side-item"><h3>Corn on the Cob</h3><span style="color: #cc0000; font-weight: bold;">$3.99</span></div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <h2>Ready to Order?</h2>
+            <p>Get your BBQ fix delivered or pick it up!</p>
+            <div class="cta-buttons">
+                <a href="https://order.redriverrestaurants.com/order/red-river-bbq-league-city-1911-e-main-st-suite-b" target="_blank" rel="nofollow noopener noreferrer" class="cta-button pickup">Pick-Up Order</a>
+                <a href="https://order.online/store/red-river-bbq-grill-league-city-72318?hideModal=true&pickup=true" target="_blank" rel="nofollow noopener noreferrer" class="cta-button delivery">Delivery Order</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <img src="images/RRBBQBrand.png" alt="Red River BBQ & Grill">
+        <p>1911 E. Main St., League City, TX 77573</p>
+        <p>281.332.8086</p>
+        <p style="margin-top: 1rem; font-size: 0.875rem;">&copy; 2024 Red River BBQ & Grill. All Rights Reserved.</p>
+    </footer>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Menu",
+        "name": "Red River BBQ & Grill Menu",
+        "provider": {"@type": "Restaurant", "name": "Red River BBQ & Grill"}
+    }
+    </script>
+</body>
+</html>
