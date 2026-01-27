@@ -25,6 +25,19 @@
         .btn-outline-modern::before { content: ''; position: absolute; top: 0; left: 0; width: 0; height: 100%; background: #fff; transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1); z-index: -1; }
         .btn-outline-modern:hover::before { width: 100%; }
         .btn-outline-modern:hover { color: #1a1a1a; transform: scale(1.05); }
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        .animate-scale-in {
+            animation: scaleIn 0.2s ease-out;
+        }
     </style>
 </head>
 <body class="bg-gray-100 overflow-x-hidden min-h-screen flex flex-col">
@@ -34,7 +47,7 @@
         <div class="hidden md:block bg-gradient-to-r from-[#cc0000] via-[#dd1111] to-[#cc0000] border-b-4 border-[#880000] shadow-lg">
             <div class="max-w-7xl mx-auto flex justify-end items-center py-2 px-4 text-white text-[11px] font-bold uppercase tracking-wider space-x-6">
                 <a href="#" class="flex items-center hover:scale-110 transition-transform duration-300 whitespace-nowrap group">GIFT CARDS <i data-lucide="gift" class="ml-1 w-4 h-4 group-hover:animate-bounce"></i></a>
-                <a href="#" class="flex items-center hover:scale-110 transition-transform duration-300 whitespace-nowrap group">ORDER ONLINE <i data-lucide="shopping-cart" class="ml-1 w-4 h-4 group-hover:animate-bounce"></i></a>
+                <button onclick="openOrderModal()" class="flex items-center hover:scale-110 transition-transform duration-300 whitespace-nowrap group bg-transparent border-none cursor-pointer text-white">ORDER ONLINE <i data-lucide="shopping-cart" class="ml-1 w-4 h-4 group-hover:animate-bounce"></i></button>
                 <a href="#" class="flex items-center hover:scale-110 transition-transform duration-300 whitespace-nowrap group">E-CLUB <i data-lucide="mail" class="ml-1 w-4 h-4 group-hover:animate-bounce"></i></a>
                 <a href="https://www.toasttab.com/red-river-bbq-league-city-1911-e-main-st-suite-b/rewardsSignup" target="_blank" rel="noopener noreferrer" class="flex items-center hover:scale-110 transition-transform duration-300 whitespace-nowrap group">REWARDS <i data-lucide="trophy" class="ml-1 w-4 h-4 group-hover:animate-bounce"></i></a>
             </div>
@@ -130,7 +143,7 @@
                     <div class="mb-8">
                         <h2 class="font-oswald text-2xl font-bold text-gray-800 mb-4">Quick Links</h2>
                         <div class="flex flex-col gap-3">
-                            <button id="view-menu-btn" class="inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg transition-all text-center cursor-pointer">View Menu</button>
+                            <a href="#" class="inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg transition-all text-center">View Menu</a>
                             <a href="#" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all text-center"><i data-lucide="shopping-cart" class="w-4 h-4 inline mr-2"></i> Order Online</a>
                             <a href="#" class="inline-block bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-6 rounded-lg transition-all text-center"><i data-lucide="utensils" class="w-4 h-4 inline mr-2"></i> Catering</a>
                             <a href="https://www.facebook.com/profile.php?id=100063717936123" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-6 rounded-lg transition-all">
@@ -226,32 +239,63 @@
         <i data-lucide="chevron-up" class="w-6 h-6"></i>
     </button>
 
-    <!-- Menu Modal -->
-    <div id="menu-modal" class="fixed inset-0 bg-black/90 z-[100] hidden items-center justify-center p-4">
-        <button id="close-modal" class="absolute top-4 right-4 w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all z-10">
-            <i data-lucide="x" class="w-6 h-6 text-white"></i>
-        </button>
+    <!-- Order Modal -->
+    <div id="orderModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden">
+        <!-- Backdrop -->
+        <div class="fixed inset-0 bg-black/50 z-40" onclick="closeOrderModal()"></div>
         
-        <button id="prev-menu" class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all z-10">
-            <i data-lucide="chevron-left" class="w-6 h-6 text-white"></i>
-        </button>
-        
-        <button id="next-menu" class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all z-10">
-            <i data-lucide="chevron-right" class="w-6 h-6 text-white"></i>
-        </button>
-        
-        <div class="max-w-4xl w-full max-h-[90vh] overflow-auto">
-            <img id="menu-image" src="" alt="Menu" class="w-full h-auto" />
-        </div>
-        
-        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 text-white text-sm">
-            Page <span id="current-page">1</span> of <span id="total-pages">2</span>
+        <!-- Modal Content -->
+        <div class="bg-white rounded-lg shadow-2xl max-w-md w-full z-50 animate-scale-in">
+            <!-- Header -->
+            <div class="bg-[#cc0000] px-6 py-4 flex justify-between items-center rounded-t-lg">
+                <h2 class="text-white font-oswald font-bold text-2xl uppercase">
+                    ORDER ONLINE
+                </h2>
+                <button onclick="closeOrderModal()" class="text-white hover:bg-[#880000] p-1 rounded transition-colors">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+
+            <!-- Content -->
+            <div class="p-6">
+                <div class="space-y-3">
+                    <a href="https://order.redriverrestaurants.com/order/red-river-bbq-league-city-1911-e-main-st-suite-b" class="block w-full px-4 py-3 border-b-2 border-gray-300 text-[#cc0000] font-oswald font-bold uppercase text-center hover:bg-red-50 transition-colors" target="_blank" rel="noopener noreferrer">
+                        LEAGUE CITY | PICK-UP
+                    </a>
+                    <a href="https://order.online/store/red-river-bbq-grill-league-city-72318?hideModal=true&amp;pickup=true" class="block w-full px-4 py-3 border-b-2 border-gray-300 text-[#cc0000] font-oswald font-bold uppercase text-center hover:bg-red-50 transition-colors" target="_blank" rel="noopener noreferrer">
+                        LEAGUE CITY | DELIVERY
+                    </a>
+                    <a href="https://order.redriverrestaurants.com/order/red-river-bbq-katy-1711-s-mason" class="block w-full px-4 py-3 border-b-2 border-gray-300 text-[#cc0000] font-oswald font-bold uppercase text-center hover:bg-red-50 transition-colors" target="_blank" rel="noopener noreferrer">
+                        KATY | PICK-UP
+                    </a>
+                    <a href="https://www.doordash.com/store/red-river-bbq-&-burger-katy-54597/20035367/?event_type=autocomplete&amp;pickup=false" class="block w-full px-4 py-3 text-[#cc0000] font-oswald font-bold uppercase text-center hover:bg-red-50 transition-colors" target="_blank" rel="noopener noreferrer">
+                        KATY | DELIVERY
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 
     <!-- Scripts -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
+        function openOrderModal() {
+            const modal = document.getElementById('orderModal');
+            modal.classList.remove('hidden');
+            lucide.createIcons();
+        }
+
+        function closeOrderModal() {
+            const modal = document.getElementById('orderModal');
+            modal.classList.add('hidden');
+        }
+
+        // Close modal when clicking on backdrop or pressing Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeOrderModal();
+            }
+        });
         lucide.createIcons();
         const scrollBtn = document.getElementById('scroll-to-top');
         window.addEventListener('scroll', () => {
@@ -277,77 +321,6 @@
         if (mobileMenuClose) mobileMenuClose.addEventListener('click', closeMobileMenu);
         document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && body.classList.contains('mobile-menu-active')) closeMobileMenu(); });
         window.addEventListener('resize', () => { if (window.innerWidth >= 768 && body.classList.contains('mobile-menu-active')) closeMobileMenu(); });
-
-        // Menu Modal
-        const menuImages = [
-            'images/Dine-In-Menu-website-print-9.2025-1-scaled.jpg',
-            'images/Dine-In-Menu-website-print-9.2025-2-scaled.jpg'
-        ];
-        let currentMenuIndex = 0;
-        
-        const menuModal = document.getElementById('menu-modal');
-        const menuImage = document.getElementById('menu-image');
-        const viewMenuBtn = document.getElementById('view-menu-btn');
-        const closeModalBtn = document.getElementById('close-modal');
-        const prevMenuBtn = document.getElementById('prev-menu');
-        const nextMenuBtn = document.getElementById('next-menu');
-        const currentPageSpan = document.getElementById('current-page');
-        
-        function showMenu(index) {
-            currentMenuIndex = index;
-            menuImage.src = menuImages[index];
-            currentPageSpan.textContent = index + 1;
-            
-            // Update button states
-            prevMenuBtn.style.opacity = index === 0 ? '0.5' : '1';
-            prevMenuBtn.style.pointerEvents = index === 0 ? 'none' : 'auto';
-            nextMenuBtn.style.opacity = index === menuImages.length - 1 ? '0.5' : '1';
-            nextMenuBtn.style.pointerEvents = index === menuImages.length - 1 ? 'none' : 'auto';
-        }
-        
-        viewMenuBtn.addEventListener('click', () => {
-            menuModal.classList.remove('hidden');
-            menuModal.classList.add('flex');
-            showMenu(0);
-            lucide.createIcons();
-        });
-        
-        closeModalBtn.addEventListener('click', () => {
-            menuModal.classList.add('hidden');
-            menuModal.classList.remove('flex');
-        });
-        
-        prevMenuBtn.addEventListener('click', () => {
-            if (currentMenuIndex > 0) {
-                showMenu(currentMenuIndex - 1);
-            }
-        });
-        
-        nextMenuBtn.addEventListener('click', () => {
-            if (currentMenuIndex < menuImages.length - 1) {
-                showMenu(currentMenuIndex + 1);
-            }
-        });
-        
-        // Close modal on escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && !menuModal.classList.contains('hidden')) {
-                menuModal.classList.add('hidden');
-                menuModal.classList.remove('flex');
-            }
-            if (!menuModal.classList.contains('hidden')) {
-                if (e.key === 'ArrowLeft') prevMenuBtn.click();
-                if (e.key === 'ArrowRight') nextMenuBtn.click();
-            }
-        });
-        
-        // Close modal on background click
-        menuModal.addEventListener('click', (e) => {
-            if (e.target === menuModal) {
-                menuModal.classList.add('hidden');
-                menuModal.classList.remove('flex');
-            }
-        });
     </script>
 </body>
 </html>

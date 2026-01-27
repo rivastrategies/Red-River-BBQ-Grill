@@ -364,9 +364,9 @@
                 <a href="#" class="flex items-center hover:scale-110 transition-transform duration-300 whitespace-nowrap group">
                     GIFT CARDS <i data-lucide="gift" class="ml-1 w-4 h-4 group-hover:animate-bounce"></i>
                 </a>
-                <a href="#" class="flex items-center hover:scale-110 transition-transform duration-300 whitespace-nowrap group">
+                <button onclick="openOrderModal()" class="flex items-center hover:scale-110 transition-transform duration-300 whitespace-nowrap group bg-transparent border-none cursor-pointer text-white text-[11px] font-bold uppercase tracking-wider">
                     ORDER ONLINE <i data-lucide="shopping-cart" class="ml-1 w-4 h-4 group-hover:animate-bounce"></i>
-                </a>
+                </button>
                 <a href="#" class="flex items-center hover:scale-110 transition-transform duration-300 whitespace-nowrap group">
                     E-CLUB <i data-lucide="mail" class="ml-1 w-4 h-4 group-hover:animate-bounce"></i>
                 </a>
@@ -735,6 +735,43 @@
         </div>
     </footer>
 
+    <!-- Order Modal -->
+    <div id="orderModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden">
+        <!-- Backdrop -->
+        <div class="fixed inset-0 bg-black/50 z-40" onclick="closeOrderModal()"></div>
+        
+        <!-- Modal Content -->
+        <div class="bg-white rounded-lg shadow-2xl max-w-md w-full z-50 animate-scale-in">
+            <!-- Header -->
+            <div class="bg-[#cc0000] px-6 py-4 flex justify-between items-center rounded-t-lg">
+                <h2 class="text-white font-oswald font-bold text-2xl uppercase">
+                    ORDER ONLINE
+                </h2>
+                <button onclick="closeOrderModal()" class="text-white hover:bg-[#880000] p-1 rounded transition-colors">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+
+            <!-- Content -->
+            <div class="p-6">
+                <div class="space-y-3">
+                    <a href="https://order.redriverrestaurants.com/order/red-river-bbq-league-city-1911-e-main-st-suite-b" class="block w-full px-4 py-3 border-b-2 border-gray-300 text-[#cc0000] font-oswald font-bold uppercase text-center hover:bg-red-50 transition-colors" target="_blank" rel="noopener noreferrer">
+                        LEAGUE CITY | PICK-UP
+                    </a>
+                    <a href="https://order.online/store/red-river-bbq-grill-league-city-72318?hideModal=true&amp;pickup=true" class="block w-full px-4 py-3 border-b-2 border-gray-300 text-[#cc0000] font-oswald font-bold uppercase text-center hover:bg-red-50 transition-colors" target="_blank" rel="noopener noreferrer">
+                        LEAGUE CITY | DELIVERY
+                    </a>
+                    <a href="https://order.redriverrestaurants.com/order/red-river-bbq-katy-1711-s-mason" class="block w-full px-4 py-3 border-b-2 border-gray-300 text-[#cc0000] font-oswald font-bold uppercase text-center hover:bg-red-50 transition-colors" target="_blank" rel="noopener noreferrer">
+                        KATY | PICK-UP
+                    </a>
+                    <a href="https://www.doordash.com/store/red-river-bbq-&-burger-katy-54597/20035367/?event_type=autocomplete&amp;pickup=false" class="block w-full px-4 py-3 text-[#cc0000] font-oswald font-bold uppercase text-center hover:bg-red-50 transition-colors" target="_blank" rel="noopener noreferrer">
+                        KATY | DELIVERY
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- SCROLL TO TOP BUTTON -->
     <button 
         id="scroll-to-top"
@@ -749,6 +786,25 @@
     <script>
         // Initialize Lucide icons
         lucide.createIcons();
+
+        // ===== Order Modal Functions =====
+        function openOrderModal() {
+            const modal = document.getElementById('orderModal');
+            modal.classList.remove('hidden');
+            lucide.createIcons();
+        }
+
+        function closeOrderModal() {
+            const modal = document.getElementById('orderModal');
+            modal.classList.add('hidden');
+        }
+
+        // Close modal when pressing Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeOrderModal();
+            }
+        });
 
         // ===== Scroll to Top Logic =====
         const scrollBtn = document.getElementById('scroll-to-top');

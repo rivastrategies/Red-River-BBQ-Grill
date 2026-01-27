@@ -1,19 +1,26 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Gift, ShoppingCart, Mail, Trophy } from 'lucide-react';
+import OrderModal from './OrderModal';
 
 const Header: React.FC = () => {
+  const [isOrderModalOpen, setIsOrderModalOpen] = useState(false);
+
   return (
     <header className="w-full">
+      <OrderModal isOpen={isOrderModalOpen} onClose={() => setIsOrderModalOpen(false)} />
       {/* Top Utility Bar */}
       <div className="bg-[#cc0000] border-b-4 border-[#880000]">
         <div className="max-w-7xl mx-auto flex justify-end items-center py-1 px-4 text-white text-[11px] font-bold uppercase tracking-wider space-x-6">
           <a href="#" className="flex items-center hover:underline">
             GIFT CARDS <Gift className="ml-1 w-4 h-4" />
           </a>
-          <a href="#" className="flex items-center hover:underline">
+          <button
+            onClick={() => setIsOrderModalOpen(true)}
+            className="flex items-center hover:underline bg-transparent border-none cursor-pointer"
+          >
             ORDER ONLINE <ShoppingCart className="ml-1 w-4 h-4" />
-          </a>
+          </button>
           <a href="#" className="flex items-center hover:underline">
             E-CLUB <Mail className="ml-1 w-4 h-4" />
           </a>
