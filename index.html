@@ -858,21 +858,8 @@
         });
 
         // ===== Parallax Effect for Hero Image =====
-        const heroImage = document.getElementById('hero-image');
-        const hero = document.getElementById('hero');
+        // Parallax effect disabled - hero image stays fixed when scrolling
         
-        window.addEventListener('scroll', () => {
-            if (hero) {
-                const scrolled = window.scrollY;
-                const heroHeight = hero.offsetHeight;
-                
-                if (scrolled < heroHeight) {
-                    const parallaxValue = scrolled * 0.4;
-                    heroImage.style.transform = `scale(1.1) translateY(${parallaxValue}px)`;
-                }
-            }
-        });
-
         // ===== Scroll Reveal Animation =====
         const revealElements = document.querySelectorAll('.reveal');
         
