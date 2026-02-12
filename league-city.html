@@ -5,6 +5,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>League City Location • Red River Bar-B-Que & Grill</title>
+    
+    <!-- Schema.org Location Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://redriverbbq.com/league-city.html#breadcrumb",
+                "itemListElement": [
+                    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://redriverbbq.com/"},
+                    {"@type": "ListItem", "position": 2, "name": "Locations", "item": "https://redriverbbq.com/locations.html"},
+                    {"@type": "ListItem", "position": 3, "name": "League City", "item": "https://redriverbbq.com/league-city.html"}
+                ]
+            },
+            {
+                "@type": "Restaurant",
+                "@id": "https://redriverbbq.com/league-city.html#restaurant",
+                "name": "Red River BBQ & Grill - League City",
+                "url": "https://redriverbbq.com/league-city.html",
+                "telephone": "+12813328086",
+                "description": "Red River BBQ & Grill League City location serving authentic Texas BBQ, smoked meats, and full catering services.",
+                "image": "https://redriverbbq.com/images/RRBBQBrand.png",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "1911 E. Main St., Suite B",
+                    "addressLocality": "League City",
+                    "addressRegion": "TX",
+                    "postalCode": "77573",
+                    "addressCountry": "US"
+                },
+                "geo": {"@type": "GeoCoordinates", "latitude": 29.4952, "longitude": -95.0863},
+                "openingHoursSpecification": [
+                    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"], "opens": "11:00", "closes": "21:00"},
+                    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday", "Saturday"], "opens": "11:00", "closes": "21:30"}
+                ],
+                "servesCuisine": ["BBQ", "Barbecue", "Texas BBQ", "American"],
+                "priceRange": "$$",
+                "hasMenu": {"@type": "Menu", "url": "https://redriverbbq.com/menu.html"},
+                "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.4", "reviewCount": "3645"}
+            },
+            {
+                "@type": "LocalBusiness",
+                "@id": "https://redriverbbq.com/league-city.html#localbusiness",
+                "name": "Red River BBQ & Grill in League City",
+                "url": "https://redriverbbq.com/league-city.html",
+                "telephone": "+12813328086",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "1911 E. Main St., Suite B",
+                    "addressLocality": "League City",
+                    "addressRegion": "TX",
+                    "postalCode": "77573",
+                    "addressCountry": "US"
+                },
+                "areaServed": "League City, TX"
+            }
+        ]
+    }
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -42,8 +102,7 @@
 </head>
 <body class="bg-gray-100 overflow-x-hidden min-h-screen flex flex-col">
 
-    <!-- HEADER (Exact copy from main page) -->
-    <header class="w-full sticky top-0 z-50">
+    <!-- HEADER (Exact copy from main page) -->   <header class="w-full sticky top-0 z-50">
         <div class="hidden md:block bg-gradient-to-r from-[#cc0000] via-[#dd1111] to-[#cc0000] border-b-4 border-[#880000] shadow-lg">
             <div class="max-w-7xl mx-auto flex justify-end items-center py-2 px-4 text-white text-[11px] font-bold uppercase tracking-wider space-x-6">
                 <a href="https://order.toasttab.com/egiftcards/red-river-bbq-league-city-1911-e-main-st-suite-b" target="_blank" rel="noopener noreferrer" class="flex items-center hover:scale-110 transition-transform duration-300 whitespace-nowrap group">GIFT CARDS <i data-lucide="gift" class="ml-1 w-4 h-4 group-hover:animate-bounce"></i></a>
@@ -229,6 +288,26 @@
                 <a href="#" class="transition-all duration-500 group-hover:scale-110 group-hover:drop-shadow-[0_0_30px_rgba(0,167,157,0.5)]"><img src="images/brand.png" alt="Red River Cantina" class="h-32 md:h-40 w-auto" /></a>
             </div>
         </div>
+        
+        <!-- Social & Links -->
+        <div class="mt-12 flex flex-wrap justify-center gap-4">
+            <a href="careers.html" class="glass px-4 py-2 rounded-full text-sm hover:bg-white/20 transition-all flex items-center gap-2">
+                <i data-lucide="briefcase" class="w-4 h-4"></i> Careers
+            </a>
+            <a href="catering.html" class="glass px-4 py-2 rounded-full text-sm hover:bg-white/20 transition-all flex items-center gap-2">
+                <i data-lucide="utensils" class="w-4 h-4"></i> Catering
+            </a>
+            <a href="community.html" class="glass px-4 py-2 rounded-full text-sm hover:bg-white/20 transition-all flex items-center gap-2">
+                <i data-lucide="heart" class="w-4 h-4"></i> Community
+            </a>
+            <a href="reviews.html" class="glass px-4 py-2 rounded-full text-sm hover:bg-white/20 transition-all flex items-center gap-2">
+                <i data-lucide="star" class="w-4 h-4"></i> ⭐ Customer Reviews
+            </a>
+            <a href="https://www.toasttab.com/red-river-bbq-league-city-1911-e-main-st-suite-b/marketing-signup" target="_blank" rel="noopener noreferrer" class="glass px-4 py-2 rounded-full text-sm hover:bg-white/20 transition-all flex items-center gap-2">
+                <i data-lucide="mail" class="w-4 h-4"></i> E-Club
+            </a>
+        </div>
+        
         <div class="mt-12 text-center text-xs text-black uppercase tracking-widest">&copy; 2026 Red River BBQ & Grill. All Rights Reserved.
             <p class="mt-2 text-black normal-case tracking-normal">Made with <span class="text-red-500">♥</span> in Texas | Riva Strategies</p>
         </div>

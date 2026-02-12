@@ -8,53 +8,70 @@
     <meta name="description" content="Red River BBQ & Grill serves authentic Texas BBQ in League City, TX. Family-friendly dining with smoked meats, homestyle sides, and catering services.">
     <link rel="canonical" href="https://redriverbbq.com/">
     
-    <!-- Schema.org Restaurant Markup -->
+    <!-- Comprehensive Schema.org Markup for SEO -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "Restaurant",
-        "@id": "https://redriverbbq.com/#restaurant",
-        "name": "Red River BBQ & Grill",
-        "url": "https://redriverbbq.com/",
-        "telephone": "+12813328086",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "1911 E. Main St.",
-            "addressLocality": "League City",
-            "addressRegion": "TX",
-            "postalCode": "77573",
-            "addressCountry": "US"
-        },
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 29.4952,
-            "longitude": -95.0863
-        },
-        "openingHoursSpecification": [
+        "@graph": [
             {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"],
-                "opens": "11:00",
-                "closes": "21:00"
+                "@type": "Organization",
+                "@id": "https://redriverbbq.com/#organization",
+                "name": "Red River BBQ & Grill",
+                "url": "https://redriverbbq.com/",
+                "logo": "https://redriverbbq.com/images/RRBBQBrand.png",
+                "description": "Red River BBQ & Grill serves authentic Texas bar-b-que in League City, TX since 2002. Family-friendly dining with smoked meats, homestyle sides, and full catering services.",
+                "sameAs": ["https://www.facebook.com/profile.php?id=100063717936123"],
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "contactType": "Customer Service",
+                    "telephone": "+12813328086",
+                    "areaServed": "US"
+                },
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "1911 E. Main St., Suite B",
+                    "addressLocality": "League City",
+                    "addressRegion": "TX",
+                    "postalCode": "77573",
+                    "addressCountry": "US"
+                },
+                "foundingDate": "2002",
+                "foundingLocation": {"@type": "Place", "name": "League City, TX"}
             },
             {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Friday", "Saturday"],
-                "opens": "11:00",
-                "closes": "21:30"
+                "@type": "Restaurant",
+                "@id": "https://redriverbbq.com/#restaurant",
+                "name": "Red River BBQ & Grill",
+                "url": "https://redriverbbq.com/",
+                "telephone": "+12813328086",
+                "email": "contact@redriverbbq.com",
+                "description": "Authentic Texas BBQ restaurant serving smoked meats, ribs, brisket, pulled pork, and homestyle sides with catering and private event services.",
+                "image": ["https://redriverbbq.com/images/RRBBQBrand.png"],
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "1911 E. Main St., Suite B",
+                    "addressLocality": "League City",
+                    "addressRegion": "TX",
+                    "postalCode": "77573",
+                    "addressCountry": "US"
+                },
+                "geo": {"@type": "GeoCoordinates", "latitude": 29.4952, "longitude": -95.0863},
+                "openingHoursSpecification": [
+                    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"], "opens": "11:00", "closes": "21:00"},
+                    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday", "Saturday"], "opens": "11:00", "closes": "21:30"}
+                ],
+                "servesCuisine": ["BBQ", "Barbecue", "Texas BBQ", "American"],
+                "priceRange": "$$",
+                "hasMenu": {"@type": "Menu", "url": "https://redriverbbq.com/menu.html", "name": "Red River BBQ & Grill Menu"},
+                "acceptsReservations": "false",
+                "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.4", "reviewCount": "3645"},
+                "paymentAccepted": ["Cash", "CreditCard", "DebitCard", "ApplePayment", "GooglePayment"]
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://redriverbbq.com/#breadcrumb",
+                "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://redriverbbq.com/"}]
             }
-        ],
-        "servesCuisine": ["BBQ", "Barbecue", "Texas BBQ", "American"],
-        "priceRange": "$$",
-        "hasMenu": "https://redriverbbq.com/menu.html",
-        "acceptsReservations": "false",
-        "menu": "https://redriverbbq.com/menu.html",
-        "image": [
-            "https://redriverbbq.com/images/RRBBQBrand.png",
-            "https://redriverbbq.com/images/RedRiverBBQ&Grill-BBQ.jpg"
-        ],
-        "sameAs": [
-            "https://www.facebook.com/profile.php?id=100063717936123"
         ]
     }
     </script>
@@ -467,6 +484,7 @@
                         <li><a href="party-room.html" class="nav-link hover:text-yellow-400 transition-all duration-300">PARTY ROOM</a></li>
                         <li><a href="./careers.html" class="nav-link hover:text-yellow-400 transition-all duration-300">CAREERS</a></li>
                         <li><a href="community.html" class="nav-link hover:text-yellow-400 transition-all duration-300">COMMUNITY</a></li>
+                        <li><a href="reviews.html" class="nav-link hover:text-yellow-400 transition-all duration-300">REVIEWS</a></li>
                     </ul>
                     <div class="mt-2 flex space-x-4 text-[11px] font-bold">
                         <a href="https://apps.apple.com/us/app/red-river-restaurants/id6744835848" target="_blank" rel="noopener noreferrer" class="text-red-400 hover:text-red-300 transition-colors flex items-center gap-1 hover:gap-2">
@@ -532,6 +550,12 @@
                     <a href="community.html" class="flex items-center gap-3 px-4 py-3 text-black font-oswald font-bold uppercase tracking-wide rounded-lg hover:bg-gray-100 transition-all">
                         <i data-lucide="heart" class="w-5 h-5 text-red-500"></i>
                         Community
+                    </a>
+                </li>
+                <li>
+                    <a href="reviews.html" class="flex items-center gap-3 px-4 py-3 text-black font-oswald font-bold uppercase tracking-wide rounded-lg hover:bg-gray-100 transition-all">
+                        <i data-lucide="star" class="w-5 h-5 text-red-500"></i>
+                        Reviews
                     </a>
                 </li>
             </ul>
@@ -659,6 +683,7 @@
                                 <a href="https://kiershcateringevents.com/" target="_blank" rel="noopener noreferrer" class="text-xs hover:text-red-600 transition-colors bg-gray-100 hover:bg-red-50 px-3 py-1.5 rounded-full">Catering</a>
                                 <a href="#" onclick="openOrderModal(); return false;" class="text-xs hover:text-red-600 transition-colors bg-gray-100 hover:bg-red-50 px-3 py-1.5 rounded-full">Order</a>
                                 <a href="./careers.html" class="text-xs hover:text-red-600 transition-colors bg-gray-100 hover:bg-red-50 px-3 py-1.5 rounded-full">Careers</a>
+                                <a href="reviews.html" class="text-xs hover:text-red-600 transition-colors bg-gray-100 hover:bg-red-50 px-3 py-1.5 rounded-full">⭐ Customer Reviews</a>
                             </div>
                         </div>
                     </div>
@@ -697,6 +722,77 @@
                 <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
                     <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5,73.84-4.36,147.54,16.88,218.2,35.26,69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-1.42,1200,34.33V0Z"></path>
                 </svg>
+            </div>
+        </section>
+        
+        <!-- CUSTOMER REVIEWS SECTION -->
+        <section class="py-16 px-4 bg-white">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-5xl font-oswald font-bold text-gray-800 mb-3">What Our Customers Say</h2>
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 mb-3">
+                        <div class="flex items-center gap-1 text-yellow-400">
+                            <i data-lucide="star" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+                            <i data-lucide="star" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+                            <i data-lucide="star" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+                            <i data-lucide="star" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+                            <i data-lucide="star" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-2xl sm:text-3xl font-bold text-gray-800">4.4</span>
+                            <span class="text-xs sm:text-sm text-gray-500 uppercase tracking-wide">Google Reviews</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-base sm:text-lg">Based on 3,645 verified reviews</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <!-- Review 1 - Bobby Banning -->
+                    <div class="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+                        <div class="mb-4">
+                            <div class="text-2xl mb-2">⭐⭐⭐⭐⭐</div>
+                            <h3 class="font-bold text-gray-800">Bobby Banning</h3>
+                            <p class="text-xs text-gray-500">4 months ago</p>
+                        </div>
+                        <blockquote class="text-gray-700 text-sm leading-relaxed" cite="https://redriverbbq.com/reviews.html#review-bobby-banning">
+                            "This place is absolutely amazing...The young man taking our order was very friendly...There was a manager walking constantly checking on people. We were truly impressed."
+                        </blockquote>
+                        <a href="reviews.html#review-bobby-banning" class="text-red-600 hover:text-red-800 text-sm font-semibold mt-3 inline-block">Read full review →</a>
+                    </div>
+                    
+                    <!-- Review 2 - Elijah Millender -->
+                    <div class="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+                        <div class="mb-4">
+                            <div class="text-2xl mb-2">⭐⭐⭐⭐⭐</div>
+                            <h3 class="font-bold text-gray-800">Elijah Millender</h3>
+                            <p class="text-xs text-gray-500">a month ago</p>
+                        </div>
+                        <blockquote class="text-gray-700 text-sm leading-relaxed" cite="https://redriverbbq.com/reviews.html#review-elijah-millender">
+                            "What I absolutely love even more is the customer service especially Mr. Philip and Mr. Ordacio...He even made my 2 year old smile ear to ear."
+                        </blockquote>
+                        <a href="reviews.html#review-elijah-millender" class="text-red-600 hover:text-red-800 text-sm font-semibold mt-3 inline-block">Read full review →</a>
+                    </div>
+                    
+                    <!-- Review 3 - Angelina Sheppard -->
+                    <div class="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+                        <div class="mb-4">
+                            <div class="text-2xl mb-2">⭐⭐⭐⭐⭐</div>
+                            <h3 class="font-bold text-gray-800">Angelina Sheppard</h3>
+                            <p class="text-xs text-gray-500">5 months ago</p>
+                        </div>
+                        <blockquote class="text-gray-700 text-sm leading-relaxed" cite="https://redriverbbq.com/reviews.html#review-angelina-sheppard">
+                            "We were blown out of the water! The food is amazing!...The smoke flavor was a solid 10/10 for those who expect that smokehouse taste."
+                        </blockquote>
+                        <a href="reviews.html#review-angelina-sheppard" class="text-red-600 hover:text-red-800 text-sm font-semibold mt-3 inline-block">Read full review →</a>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <a href="https://search.google.com/local/reviews?placeid=ChIJfZ7uSEadQIYRo09tXirvKzQ" target="_blank" rel="noopener noreferrer" class="inline-flex w-full sm:w-auto items-center justify-center gap-2 bg-[#cc0000] hover:bg-[#880000] text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg transition-all transform hover:scale-105 shadow-lg text-base sm:text-lg">
+                        Read All 3,645 Reviews
+                        <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    </a>
+                </div>
             </div>
         </section>
     </main>
