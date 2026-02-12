@@ -747,9 +747,13 @@
                     <div class="text-sm text-gray-400 mt-2">✓ Verified</div>
                 </div>
             </div>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="menu.html" class="bg-[#cc0000] hover:bg-[#880000] text-white font-bold py-3 px-8 rounded-lg transition-all transform hover:scale-105">View Menu</a>
-                <a href="order.html" class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-8 rounded-lg transition-all transform hover:scale-105">Order Online</a>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="menu.html" class="btn-modern px-8 py-4 text-white font-oswald font-bold uppercase tracking-wider rounded-lg animate-pulse-glow">
+                    View Menu
+                </a>
+                <button onclick="openOrderModal()" class="btn-outline-modern px-8 py-4 text-white font-oswald font-bold uppercase tracking-wider rounded-lg relative z-10">
+                    Order Online
+                </button>
             </div>
         </div>
     </section>
@@ -1225,9 +1229,12 @@
             <h2 class="text-4xl font-bold mb-4 font-oswald">Experience It Yourself</h2>
             <p class="text-xl mb-8">Join 3,645 satisfied customers who've discovered League City's best BBQ. Fresh-smoked daily, generous portions, and service that makes you feel like family.</p>
             <div class="flex flex-wrap justify-center gap-4 mb-8">
-                <a href="menu.html" class="bg-white text-[#cc0000] hover:bg-gray-100 font-bold py-3 px-8 rounded-lg transition-all transform hover:scale-105">View Full Menu</a>
-                <a href="order.html" class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-8 rounded-lg transition-all transform hover:scale-105">Order Online</a>
-                <a href="party-room.html" class="border-2 border-white hover:bg-white hover:text-[#cc0000] text-white font-bold py-3 px-8 rounded-lg transition-all">Reserve Party Room</a>
+                <a href="https://search.google.com/local/reviews?placeid=ChIJfZ7uSEadQIYRo09tXirvKzQ" target="_blank" rel="noopener noreferrer" class="bg-white text-[#cc0000] hover:bg-gray-100 font-bold py-3 px-8 rounded-lg transition-all transform hover:scale-105 flex items-center gap-2">
+                    <i data-lucide="star" class="w-5 h-5"></i>
+                    Read All 3,645 Reviews
+                </a>
+                <a href="menu.html" class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-8 rounded-lg transition-all transform hover:scale-105">View Full Menu</a>
+                <button onclick="openOrderModal()" class="border-2 border-white hover:bg-white hover:text-[#cc0000] text-white font-bold py-3 px-8 rounded-lg transition-all">Order Online</button>
             </div>
             <div class="text-lg">
                 <p>⭐ 4.4/5 Stars | 3,645 Google Reviews | Serving League City Since 2002</p>
