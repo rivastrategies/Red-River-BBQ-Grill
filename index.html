@@ -62,7 +62,7 @@
                 ],
                 "servesCuisine": ["BBQ", "Barbecue", "Texas BBQ", "American"],
                 "priceRange": "$$",
-                "hasMenu": {"@type": "Menu", "url": "https://redriverbbq.com/menu.html", "name": "Red River BBQ & Grill Menu"},
+                "hasMenu": {"@type": "Menu", "url": "https://redriverbbq.com/dine-in-menu.html", "name": "Red River BBQ & Grill Dine-In Menu"},
                 "acceptsReservations": "false",
                 "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.4", "reviewCount": "3645"},
                 "paymentAccepted": ["Cash", "CreditCard", "DebitCard", "ApplePayment", "GooglePayment"]
@@ -563,8 +563,9 @@
                 <nav class="hidden md:flex flex-col items-end animate-fadeInDown delay-200" style="opacity: 0; animation-fill-mode: forwards;">
                     <ul class="flex gap-x-6 text-white font-oswald font-bold uppercase text-base tracking-wide">
                         <li><a href="#location" class="nav-link hover:text-yellow-400 transition-all duration-300">LOCATION</a></li>
-                        <li><a href="menu.html" class="nav-link hover:text-yellow-400 transition-all duration-300">MENU</a></li>
-                        <li><a href="catering.html" class="nav-link hover:text-yellow-400 transition-all duration-300">CATERING</a></li>
+                        <li><a href="dine-in-menu.html" class="nav-link hover:text-yellow-400 transition-all duration-300">DINE IN MENU</a></li>
+                        <li><a href="to-go-menu.html" class="nav-link hover:text-yellow-400 transition-all duration-300">TO-GO MENU</a></li>
+                        <li><a href="catering.html" class="nav-link hover:text-yellow-400 transition-all duration-300">CATERING MENU</a></li>
                         <li><a href="party-room.html" class="nav-link hover:text-yellow-400 transition-all duration-300">PARTY ROOM</a></li>
                         <li><a href="./careers.html" class="nav-link hover:text-yellow-400 transition-all duration-300">CAREERS</a></li>
                         <li><a href="community.html" class="nav-link hover:text-yellow-400 transition-all duration-300">COMMUNITY</a></li>
@@ -607,15 +608,21 @@
                     </a>
                 </li>
                 <li>
-                    <a href="menu.html" class="flex items-center gap-3 px-4 py-3 text-black font-oswald font-bold uppercase tracking-wide rounded-lg hover:bg-gray-100 transition-all">
+                    <a href="dine-in-menu.html" class="flex items-center gap-3 px-4 py-3 text-black font-oswald font-bold uppercase tracking-wide rounded-lg hover:bg-gray-100 transition-all">
                         <i data-lucide="book-open" class="w-5 h-5 text-red-500"></i>
-                        Menu
+                        Dine In Menu
+                    </a>
+                </li>
+                <li>
+                    <a href="to-go-menu.html" class="flex items-center gap-3 px-4 py-3 text-black font-oswald font-bold uppercase tracking-wide rounded-lg hover:bg-gray-100 transition-all">
+                        <i data-lucide="package" class="w-5 h-5 text-red-500"></i>
+                        To-Go Menu
                     </a>
                 </li>
                 <li>
                     <a href="catering.html" class="flex items-center gap-3 px-4 py-3 text-black font-oswald font-bold uppercase tracking-wide rounded-lg hover:bg-gray-100 transition-all">
                         <i data-lucide="utensils" class="w-5 h-5 text-red-500"></i>
-                        Catering
+                        Catering Menu
                     </a>
                 </li>
                 <li>
@@ -763,11 +770,11 @@
                                 <i data-lucide="link" class="w-4 h-4 text-red-500"></i> Quick Links
                             </h3>
                             <div class="flex flex-wrap justify-center gap-2">
-                                <a href="menu.html" class="text-xs hover:text-red-600 transition-colors bg-gray-100 hover:bg-red-50 px-3 py-1.5 rounded-full">Menu</a>
+                                <a href="dine-in-menu.html" class="text-xs hover:text-red-600 transition-colors bg-gray-100 hover:bg-red-50 px-3 py-1.5 rounded-full">Dine In Menu</a>
                                 <a href="https://kiershcateringevents.com/" target="_blank" rel="noopener noreferrer" class="text-xs hover:text-red-600 transition-colors bg-gray-100 hover:bg-red-50 px-3 py-1.5 rounded-full">Catering</a>
                                 <a href="#" onclick="openOrderModal(); return false;" class="text-xs hover:text-red-600 transition-colors bg-gray-100 hover:bg-red-50 px-3 py-1.5 rounded-full">Order</a>
                                 <a href="./careers.html" class="text-xs hover:text-red-600 transition-colors bg-gray-100 hover:bg-red-50 px-3 py-1.5 rounded-full">Careers</a>
-                                <a href="reviews.html" class="text-xs hover:text-red-600 transition-colors bg-gray-100 hover:bg-red-50 px-3 py-1.5 rounded-full">⭐ Customer Reviews</a>
+                                <a href="reviews.html" class="text-xs hover:text-red-600 transition-colors bg-gray-100 hover:bg-red-50 px-3 py-1.5 rounded-full">­ Customer Reviews</a>
                             </div>
                         </div>
                     </div>
@@ -834,40 +841,40 @@
                     <!-- Review 1 - Bobby Banning -->
                     <div class="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
                         <div class="mb-4">
-                            <div class="text-2xl mb-2">⭐⭐⭐⭐⭐</div>
+                            <div class="text-2xl mb-2">­­­­­</div>
                             <h3 class="font-bold text-gray-800">Bobby Banning</h3>
                             <p class="text-xs text-gray-500">4 months ago</p>
                         </div>
                         <blockquote class="text-gray-700 text-sm leading-relaxed" cite="https://redriverbbq.com/reviews.html#review-bobby-banning">
                             "This place is absolutely amazing...The young man taking our order was very friendly...There was a manager walking constantly checking on people. We were truly impressed."
                         </blockquote>
-                        <a href="reviews.html#review-bobby-banning" class="text-red-600 hover:text-red-800 text-sm font-semibold mt-3 inline-block">Read full review →</a>
+                        <a href="reviews.html#review-bobby-banning" class="text-red-600 hover:text-red-800 text-sm font-semibold mt-3 inline-block">Read full review †’</a>
                     </div>
                     
                     <!-- Review 2 - Elijah Millender -->
                     <div class="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
                         <div class="mb-4">
-                            <div class="text-2xl mb-2">⭐⭐⭐⭐⭐</div>
+                            <div class="text-2xl mb-2">­­­­­</div>
                             <h3 class="font-bold text-gray-800">Elijah Millender</h3>
                             <p class="text-xs text-gray-500">a month ago</p>
                         </div>
                         <blockquote class="text-gray-700 text-sm leading-relaxed" cite="https://redriverbbq.com/reviews.html#review-elijah-millender">
                             "What I absolutely love even more is the customer service especially Mr. Philip and Mr. Ordacio...He even made my 2 year old smile ear to ear."
                         </blockquote>
-                        <a href="reviews.html#review-elijah-millender" class="text-red-600 hover:text-red-800 text-sm font-semibold mt-3 inline-block">Read full review →</a>
+                        <a href="reviews.html#review-elijah-millender" class="text-red-600 hover:text-red-800 text-sm font-semibold mt-3 inline-block">Read full review †’</a>
                     </div>
                     
                     <!-- Review 3 - Angelina Sheppard -->
                     <div class="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
                         <div class="mb-4">
-                            <div class="text-2xl mb-2">⭐⭐⭐⭐⭐</div>
+                            <div class="text-2xl mb-2">­­­­­</div>
                             <h3 class="font-bold text-gray-800">Angelina Sheppard</h3>
                             <p class="text-xs text-gray-500">5 months ago</p>
                         </div>
                         <blockquote class="text-gray-700 text-sm leading-relaxed" cite="https://redriverbbq.com/reviews.html#review-angelina-sheppard">
                             "We were blown out of the water! The food is amazing!...The smoke flavor was a solid 10/10 for those who expect that smokehouse taste."
                         </blockquote>
-                        <a href="reviews.html#review-angelina-sheppard" class="text-red-600 hover:text-red-800 text-sm font-semibold mt-3 inline-block">Read full review →</a>
+                        <a href="reviews.html#review-angelina-sheppard" class="text-red-600 hover:text-red-800 text-sm font-semibold mt-3 inline-block">Read full review †’</a>
                     </div>
                 </div>
                 
@@ -938,7 +945,7 @@
                     <a href="index.html" class="transition-all duration-500 group-hover:scale-110 group-hover:drop-shadow-[0_0_30px_rgba(220,38,38,0.5)]">
                         <img src="images/RRBBQBrand.png" alt="Red River BBQ & Grill - League City" class="h-24 md:h-28 w-auto" />
                     </a>
-                    <p class="text-xs text-gray-400 mt-2 uppercase tracking-wide">League City TX</p>
+                    <p class="text-xs text-white mt-2 uppercase tracking-wide">League City TX</p>
                 </div>
 
                 <!-- Brand League City TX -->
@@ -946,7 +953,7 @@
                     <div class="transition-all duration-500 group-hover:scale-110 group-hover:drop-shadow-[0_0_30px_rgba(0,167,157,0.6)]">
                         <img src="images/brand.png" alt="Location - League City TX" class="h-24 md:h-28 w-auto" />
                     </div>
-                    <p class="text-xs text-gray-400 mt-2 uppercase tracking-wide">League City TX</p>
+                    <p class="text-xs text-white mt-2 uppercase tracking-wide">League City TX</p>
                 </div>
 
                 <!-- Brand Richmond TX -->
@@ -954,7 +961,7 @@
                     <a href="#" class="transition-all duration-500 group-hover:scale-110 group-hover:drop-shadow-[0_0_30px_rgba(0,167,157,0.6)]">
                         <img src="images/brand.png" alt="Location - Richmond TX" class="h-24 md:h-28 w-auto" />
                     </a>
-                    <p class="text-xs text-gray-400 mt-2 uppercase tracking-wide">Richmond TX</p>
+                    <p class="text-xs text-white mt-2 uppercase tracking-wide">Richmond TX</p>
                 </div>
 
                 <!-- BBQ Burger Upscale Katy TX -->
@@ -962,7 +969,7 @@
                     <a href="#" class="transition-all duration-500 group-hover:scale-110 group-hover:drop-shadow-[0_0_30px_rgba(220,38,38,0.5)]">
                         <img src="images/BBQ BURGER UPSCALE trans.png" alt="BBQ Burger Upscale - Katy TX" class="h-24 md:h-28 w-auto" />
                     </a>
-                    <p class="text-xs text-gray-400 mt-2 uppercase tracking-wide">Katy TX</p>
+                    <p class="text-xs text-white mt-2 uppercase tracking-wide">Katy TX</p>
                 </div>
 
                 <!-- Kiersh Co -->
@@ -991,9 +998,9 @@
         </div>
 
         <!-- Copyright -->
-        <div class="mt-12 text-center text-xs text-black uppercase tracking-widest">
+        <div class="mt-12 text-center text-xs text-white uppercase tracking-widest">
             &copy; 2026 Red River BBQ & Grill. All Rights Reserved.
-            <p class="mt-2 text-black normal-case tracking-normal">Made with <span class="text-red-500">♥</span> in Texas | Riva Strategies</p>
+            <p class="mt-2 text-white normal-case tracking-normal">Made with <span class="text-red-500">♥</span> in Texas | <a href="https://rivastrategies.com" target="_blank" rel="noopener noreferrer" class="hover:text-yellow-400 transition-colors">Riva Strategies</a></p>
         </div>
     </footer>
 

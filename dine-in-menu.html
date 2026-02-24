@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu - Red River BBQ & Grill | Authentic Texas Bar-B-Que</title>
-    <meta name="description" content="Red River BBQ & Grill menu - featuring slow-smoked Texas BBQ, ribs, brisket, pulled pork, chicken, and homestyle sides.">
-    <link rel="canonical" href="https://redriverbbq.com/menu.html">
+    <title>Dine-In Menu - Red River BBQ & Grill | Authentic Texas Bar-B-Que</title>
+    <meta name="description" content="Red River BBQ & Grill dine-in menu - featuring slow-smoked Texas BBQ, ribs, brisket, pulled pork, chicken, and homestyle sides.">
+    <link rel="canonical" href="https://redriverbbq.com/dine-in-menu.html">
     
     <!-- Comprehensive Menu Schema for SEO -->
     <script type="application/ld+json">
@@ -14,48 +14,32 @@
         "@graph": [
             {
                 "@type": "BreadcrumbList",
-                "@id": "https://redriverbbq.com/menu.html#breadcrumb",
+                "@id": "https://redriverbbq.com/dine-in-menu.html#breadcrumb",
                 "itemListElement": [
                     {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://redriverbbq.com/"},
-                    {"@type": "ListItem", "position": 2, "name": "Menu", "item": "https://redriverbbq.com/menu.html"}
+                    {"@type": "ListItem", "position": 2, "name": "Dine-In Menu", "item": "https://redriverbbq.com/dine-in-menu.html"}
                 ]
             },
             {
                 "@type": "Menu",
-                "@id": "https://redriverbbq.com/menu.html#menu",
-                "name": "Red River BBQ & Grill Menu",
+                "@id": "https://redriverbbq.com/dine-in-menu.html#menu",
+                "name": "Red River BBQ & Grill Dine-In Menu",
                 "description": "Authentic Texas BBQ menu featuring slow-smoked meats, ribs, brisket, pulled pork, chicken, and homestyle sides.",
-                "url": "https://redriverbbq.com/menu.html",
+                "url": "https://redriverbbq.com/dine-in-menu.html",
                 "image": "https://redriverbbq.com/images/RRBBQBrand.png",
                 "hasMenuSection": [
-                    {
-                        "@type": "MenuSection",
-                        "name": "Smoked Meats",
-                        "description": "Slow-smoked Texas BBQ specialties",
-                        "hasMenuItem": [
-                            {"@type": "MenuItem", "name": "Texas Brisket", "description": "Slow-smoked beef brisket", "offers": {"@type": "Offer", "priceCurrency": "USD", "price": "18.95"}},
-                            {"@type": "MenuItem", "name": "St. Louis Ribs", "description": "Fall-off-the-bone smoked ribs", "offers": {"@type": "Offer", "priceCurrency": "USD", "price": "19.95"}},
-                            {"@type": "MenuItem", "name": "Pulled Pork", "description": "Tender smoked pulled pork", "offers": {"@type": "Offer", "priceCurrency": "USD", "price": "14.95"}},
-                            {"@type": "MenuItem", "name": "Smoked Chicken", "description": "Juicy smoked chicken quarters", "offers": {"@type": "Offer", "priceCurrency": "USD", "price": "15.95"}}
-                        ]
-                    },
-                    {
-                        "@type": "MenuSection",
-                        "name": "Sides",
-                        "description": "Homestyle sides and complementary items",
-                        "hasMenuItem": [
-                            {"@type": "MenuItem", "name": "Mac & Cheese", "description": "Creamy homemade mac and cheese", "offers": {"@type": "Offer", "priceCurrency": "USD", "price": "4.95"}},
-                            {"@type": "MenuItem", "name": "Baked Beans", "description": "Homestyle baked beans", "offers": {"@type": "Offer", "priceCurrency": "USD", "price": "3.95"}}
-                        ]
-                    },
-                    {
-                        "@type": "MenuSection",
-                        "name": "Combo Meals",
-                        "description": "Complete BBQ meals with sides",
-                        "hasMenuItem": [
-                            {"@type": "MenuItem", "name": "BBQ Combo Plate", "description": "Your choice of two smoked meats with two sides and cornbread", "offers": {"@type": "Offer", "priceCurrency": "USD", "price": "24.95"}}
-                        ]
-                    }
+                    {"@type": "MenuSection", "name": "Appetizers"},
+                    {"@type": "MenuSection", "name": "Salads & Gumbo"},
+                    {"@type": "MenuSection", "name": "Texas Bar-B-Que"},
+                    {"@type": "MenuSection", "name": "Bar-B-Que Spuds"},
+                    {"@type": "MenuSection", "name": "Burgers & Sandwiches"},
+                    {"@type": "MenuSection", "name": "Steak & Chicken"},
+                    {"@type": "MenuSection", "name": "Fish & Shrimp"},
+                    {"@type": "MenuSection", "name": "Kid's Menu"},
+                    {"@type": "MenuSection", "name": "Desserts"},
+                    {"@type": "MenuSection", "name": "Lunch Specials"},
+                    {"@type": "MenuSection", "name": "Daily Specials"},
+                    {"@type": "MenuSection", "name": "Side Choices"}
                 ],
                 "provider": {"@type": "Restaurant", "@id": "https://redriverbbq.com/#restaurant"},
                 "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.4", "reviewCount": "3645"}
@@ -256,79 +240,133 @@
             transform: scale(1.05);
         }
 
-        /* Menu page specific styles */
-        .menu-category { 
-            border-left: 4px solid #cc0000; 
-            padding-left: 1.5rem; 
-            margin-bottom: 3rem; 
+        /* Dine-in board menu styles */
+        .menu-board-wrap {
+            background: #dfdfdf;
+            border-top: 6px solid #cfcfcf;
         }
-        .menu-category h2 { 
-            font-size: 2rem; 
-            font-weight: bold; 
-            text-transform: uppercase; 
-            color: #1a1a1a; 
-            margin-bottom: 0.5rem; 
+        .menu-board-title {
+            color: #d71818;
+            font-weight: 700;
+            letter-spacing: 0.5px;
         }
-        .menu-category > p { 
-            color: #666; 
-            margin-bottom: 1.5rem; 
+        .menu-sheet {
+            background: #efefef;
+            border: 2px solid #d3d3d3;
+            border-radius: 14px;
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+            padding: 1.5rem;
         }
-        .menu-item { 
-            background: white; 
-            border-radius: 8px; 
-            padding: 1rem; 
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            margin-bottom: 1rem; 
-            transition: all 0.3s; 
+        .menu-sheet + .menu-sheet {
+            margin-top: 1.75rem;
         }
-        .menu-item:hover { 
-            transform: translateX(5px); 
-            background: #fef3c7; 
+        .menu-grid-2 {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.25rem;
         }
-        .menu-item h3 { 
-            font-size: 1.25rem; 
-            font-weight: 600; 
-            color: #1a1a1a; 
+        .menu-section-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2rem;
+            line-height: 1;
+            text-transform: uppercase;
+            color: #d71818;
+            margin-bottom: 0.5rem;
+            text-align: center;
         }
-        .menu-item p { 
-            color: #666; 
-            font-size: 0.9rem; 
+        .menu-section-note {
+            text-align: center;
+            font-style: italic;
+            color: #333;
+            font-size: 0.95rem;
+            margin-bottom: 0.75rem;
         }
-        .price-tag { 
-            background: linear-gradient(135deg, #cc0000, #dc2626); 
-            color: white; 
-            padding: 0.5rem 1rem; 
-            border-radius: 9999px; 
-            font-weight: bold; 
-            white-space: nowrap; 
+        .menu-items {
+            list-style: none;
+            margin: 0;
+            padding: 0;
         }
-        .sides-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
-            gap: 1rem; 
+        .menu-items li {
+            display: flex;
+            justify-content: space-between;
+            gap: 0.75rem;
+            margin-bottom: 0.5rem;
+            align-items: baseline;
         }
-        .side-item { 
-            background: white; 
-            border-radius: 8px; 
-            padding: 1rem; 
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            transition: all 0.3s; 
+        .menu-items .name {
+            color: #2b4f81;
+            font-weight: 700;
+            text-transform: uppercase;
         }
-        .side-item:hover { 
-            transform: translateY(-2px); 
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15); 
+        .menu-items .desc {
+            color: #222;
+            display: block;
+            font-size: 0.88rem;
+            line-height: 1.3;
+            margin-top: 0.1rem;
+            text-transform: none;
+            font-weight: 400;
         }
-        @media (max-width: 768px) {
-            .menu-item { 
-                flex-direction: column; 
-                text-align: center; 
-                gap: 1rem; 
+        .menu-items .price {
+            color: #111;
+            font-weight: 700;
+            white-space: nowrap;
+            font-size: 0.95rem;
+        }
+        .dotted-box {
+            border: 2px dotted #d14545;
+            border-radius: 12px;
+            padding: 0.6rem 0.75rem;
+            margin: 0.45rem 0;
+        }
+        .double-rule {
+            border-top: 2px dotted #cf3e3e;
+            margin: 1rem 0;
+        }
+        .side-band {
+            margin-top: 1rem;
+            background: #dce8d2;
+            border: 2px dotted #556b2f;
+            border-radius: 12px;
+            padding: 0.9rem;
+        }
+        .side-band h3 {
+            color: #d71818;
+            font-size: 2rem;
+            line-height: 1;
+            text-transform: uppercase;
+            font-family: 'Oswald', sans-serif;
+            margin-bottom: 0.4rem;
+            text-align: center;
+        }
+        .side-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0.35rem 1rem;
+            font-weight: 700;
+            color: #1b2a41;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+        .menu-warning {
+            text-align: center;
+            color: #b64646;
+            font-style: italic;
+            margin: 0.75rem 0;
+            font-size: 0.9rem;
+        }
+        @media (min-width: 1024px) {
+            .menu-grid-2 {
+                grid-template-columns: 1fr 1fr;
+                gap: 1.75rem;
+            }
+        }
+        @media (max-width: 767px) {
+            .menu-section-title {
+                font-size: 1.6rem;
+            }
+            .side-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -386,8 +424,9 @@
                 <nav class="hidden md:flex flex-col items-end animate-fadeInDown delay-200" style="opacity: 0; animation-fill-mode: forwards;">
                     <ul class="flex gap-x-6 text-white font-oswald font-bold uppercase text-base tracking-wide">
                         <li><a href="index.html#location" class="nav-link hover:text-yellow-400 transition-all duration-300">LOCATION</a></li>
-                        <li><a href="menu.html" class="nav-link hover:text-yellow-400 transition-all duration-300 text-yellow-400">MENU</a></li>
-                        <li><a href="catering.html" class="nav-link hover:text-yellow-400 transition-all duration-300">CATERING</a></li>
+                        <li><a href="dine-in-menu.html" class="nav-link hover:text-yellow-400 transition-all duration-300 text-yellow-400">DINE IN MENU</a></li>
+                        <li><a href="to-go-menu.html" class="nav-link hover:text-yellow-400 transition-all duration-300">TO-GO MENU</a></li>
+                        <li><a href="catering.html" class="nav-link hover:text-yellow-400 transition-all duration-300">CATERING MENU</a></li>
                         <li><a href="party-room.html" class="nav-link hover:text-yellow-400 transition-all duration-300">PARTY ROOM</a></li>
                         <li><a href="./careers.html" class="nav-link hover:text-yellow-400 transition-all duration-300">CAREERS</a></li>
                         <li><a href="community.html" class="nav-link hover:text-yellow-400 transition-all duration-300">COMMUNITY</a></li>
@@ -430,15 +469,21 @@
                     </a>
                 </li>
                 <li>
-                    <a href="menu.html" class="flex items-center gap-3 px-4 py-3 text-black font-oswald font-bold uppercase tracking-wide rounded-lg hover:bg-gray-100 transition-all bg-gray-100">
+                    <a href="dine-in-menu.html" class="flex items-center gap-3 px-4 py-3 text-black font-oswald font-bold uppercase tracking-wide rounded-lg hover:bg-gray-100 transition-all bg-gray-100">
                         <i data-lucide="book-open" class="w-5 h-5 text-red-500"></i>
-                        Menu
+                        Dine In Menu
+                    </a>
+                </li>
+                <li>
+                    <a href="to-go-menu.html" class="flex items-center gap-3 px-4 py-3 text-black font-oswald font-bold uppercase tracking-wide rounded-lg hover:bg-gray-100 transition-all">
+                        <i data-lucide="package" class="w-5 h-5 text-red-500"></i>
+                        To-Go Menu
                     </a>
                 </li>
                 <li>
                     <a href="catering.html" class="flex items-center gap-3 px-4 py-3 text-black font-oswald font-bold uppercase tracking-wide rounded-lg hover:bg-gray-100 transition-all">
                         <i data-lucide="utensils" class="w-5 h-5 text-red-500"></i>
-                        Catering
+                        Catering Menu
                     </a>
                 </li>
                 <li>
@@ -513,184 +558,240 @@
         </nav>
     </div>
 
-    <main class="flex-grow">
-        <!-- HERO SECTION -->
-        <section class="relative h-[400px] md:h-[700px] w-full overflow-hidden">
-            <img 
-                src="images/Red River BBQ & Grill Hero image food.png" 
-                alt="Red River BBQ & Grill Menu" 
+    <main class="flex-grow menu-board-wrap">
+
+        <!-- Hero Image -->
+        <section class="relative h-[300px] md:h-[500px] w-full overflow-hidden">
+            <img
+                src="images/Red River BBQ & Grill Hero image food.png"
+                alt="Red River BBQ &amp; Grill €“ Dine-In Menu spread"
                 class="w-full h-full object-cover"
             />
-            <div class="absolute inset-0 bg-black/30"></div>
-            
+            <div class="absolute inset-0 bg-black/45"></div>
             <div class="absolute inset-0 flex items-center justify-center text-center px-4">
                 <div class="max-w-4xl mx-auto">
-                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-oswald font-bold text-white mb-4">
-                        OUR MENU
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold uppercase text-white mb-3" style="font-family:'Oswald',sans-serif; letter-spacing:0.04em; text-shadow:0 2px 12px rgba(0,0,0,.6);">
+                        Dine-In Menu
                     </h1>
-                    <p class="text-lg md:text-xl text-gray-300">
-                        Authentic Texas BBQ & Homestyle Cooking
+                    <p class="text-lg md:text-xl text-gray-200" style="font-family:'Open Sans',sans-serif;">
+                        Authentic Texas BBQ &amp; Homestyle Cooking
                     </p>
                 </div>
             </div>
         </section>
 
-        <!-- MENU CONTENT -->
-        <section class="py-16 px-4 bg-white">
-            <div class="max-w-4xl mx-auto">
-                <section class="menu-category">
-                    <h2>BBQ Plates</h2>
-                    <p>All plates served with your choice of two sides and Texas toast</p>
-                    <div class="menu-item">
-                        <div><h3>Sliced Brisket</h3><p>Premium beef brisket smoked low and slow over Texas post oak</p></div>
-                        <span class="price-tag">$16.99</span>
-                    </div>
-                    <div class="menu-item">
-                        <div><h3>Pulled Pork</h3><p>Tender pork shoulder pulled and served with our signature BBQ sauce</p></div>
-                        <span class="price-tag">$14.99</span>
-                    </div>
-                    <div class="menu-item">
-                        <div><h3>BBQ Ribs</h3><p>Fall-off-the-bone St. Louis style pork ribs with our house rub</p></div>
-                        <span class="price-tag">$17.99</span>
-                    </div>
-                    <div class="menu-item">
-                        <div><h3>1/2 BBQ Chicken</h3><p>Juicy half chicken smoked to perfection</p></div>
-                        <span class="price-tag">$12.99</span>
-                    </div>
-                    <div class="menu-item">
-                        <div><h3>Smoked Turkey Breast</h3><p>Tender turkey breast with smoky flavor</p></div>
-                        <span class="price-tag">$13.99</span>
-                    </div>
-                    <div class="menu-item">
-                        <div><h3>Two Meat Combo</h3><p>Choose any two meats from our selection</p></div>
-                        <span class="price-tag">$18.99</span>
-                    </div>
-                    <div class="menu-item">
-                        <div><h3>Three Meat Combo</h3><p>Choose any three meats for the ultimate BBQ experience</p></div>
-                        <span class="price-tag">$22.99</span>
-                    </div>
-                </section>
-
-                <div class="mt-8 bg-red-50 border-l-4 border-red-600 p-5 rounded-lg">
-                    <p class="text-xs uppercase tracking-widest text-red-700 font-bold mb-2">Customer review</p>
-                    <blockquote class="text-gray-700 italic leading-relaxed">
-                        "I ordered the peanut butter cut brisket with macaroni and cheese and potato salad. This meal was great; I couldn't finish it all, as the portion was large and the food was filling. The brisket was tender and tasted amazing when paired with the barbecue sauce. The sides acted as a nice complement."
-                    </blockquote>
-                    <p class="mt-3 text-sm text-gray-600">- George Vernau</p>
-                    <a href="reviews.html#brisket-reviews" class="mt-2 inline-block text-sm text-red-700 font-semibold hover:text-red-800">Read the full brisket review</a>
+        <section class="px-4 py-8 md:py-12">
+            <div class="max-w-6xl mx-auto">
+                <div class="flex flex-col md:flex-row items-center justify-center md:justify-start gap-4 md:gap-8 mb-6">
+                    <img src="images/RRBBQBrand.png" alt="Red River BBQ & Grill" class="w-24 h-24 md:w-28 md:h-28 object-contain" />
+                    <p class="menu-board-title text-5xl md:text-7xl font-oswald uppercase text-center" aria-hidden="true">Dine-In Menu</p>
                 </div>
 
-                <section class="menu-category">
-                    <h2>BBQ Sandwiches</h2>
-                    <p>Served on a toasted bun with pickles and onions</p>
-                    <div class="menu-item">
-                        <div><h3>Chopped Brisket Sandwich</h3><p>Chopped beef brisket on a toasted bun</p></div>
-                        <span class="price-tag">$10.99</span>
-                    </div>
-                    <div class="menu-item">
-                        <div><h3>Pulled Pork Sandwich</h3><p>Tender pulled pork with coleslaw</p></div>
-                        <span class="price-tag">$9.99</span>
-                    </div>
-                    <div class="menu-item">
-                        <div><h3>BBQ Sausage Sandwich</h3><p>Smoked sausage link on a toasted bun</p></div>
-                        <span class="price-tag">$8.99</span>
-                    </div>
-                    <div class="menu-item">
-                        <div><h3>Tri-Tip Sandwich</h3><p>Sliced tri-tip beef on a toasted bun</p></div>
-                        <span class="price-tag">$11.99</span>
-                    </div>
-                    <div class="menu-item">
-                        <div><h3>Turkey Sandwich</h3><p>Smoked turkey breast on a toasted bun</p></div>
-                        <span class="price-tag">$9.99</span>
-                    </div>
-                </section>
+                <article class="menu-sheet">
+                    <div class="menu-grid-2">
+                        <section>
+                            <h2 class="menu-section-title">Appetizers</h2>
+                            <ul class="menu-items">
+                                <li class="dotted-box"><span><span class="name">Texas Hushpuppies</span><span class="desc">Brisket, bar-b-que sauce &amp; pepper jack cheese, battered &amp; fried</span></span><span class="price">12.99</span></li>
+                                <li><span><span class="name">Brisket Cheese Fries</span><span class="desc">Fries, brisket, queso, pico de gallo, jalapenos &amp; sour cream</span></span><span class="price">12.99</span></li>
+                                <li><span><span class="name">Brisket Quesadillas</span><span class="desc">Pico de gallo, pickled jalapenos &amp; sour cream</span></span><span class="price">13.99</span></li>
+                                <li><span><span class="name">Texas Queso</span><span class="desc">Chile con queso, brisket, pico de gallo &amp; fresh fried tortilla chips</span></span><span class="price">12.99</span></li>
+                                <li><span><span class="name">Smoked Wings</span><span class="desc">8 Texas sized wings, smoked &amp; rolled in our famous bar-b-que sauce</span></span><span class="price">12.99</span></li>
+                                <li class="dotted-box"><span><span class="name">Jalapeno Shrimp Poppers</span><span class="desc">4 fried jalapenos stuffed with a Gulf shrimp &amp; pepper jack cheese</span></span><span class="price">12.99</span></li>
+                                <li><span><span class="name">Fried Mushrooms</span></span><span class="price">9.99</span></li>
+                                <li class="dotted-box"><span><span class="name">Loaded Bottle Caps</span><span class="desc">Fried jalapenos, brisket, queso, pico de gallo &amp; sour cream</span></span><span class="price">13.99</span></li>
+                                <li><span><span class="name">Brisket Nachos</span><span class="desc">Tortilla chips, queso, pico, beans, brisket, sour cream &amp; bar-b-que sauce</span></span><span class="price">13.99</span></li>
+                                <li><span><span class="name">Fried Pickles</span></span><span class="price">9.99</span></li>
+                            </ul>
 
-                <section class="menu-category">
-                    <h2>Homestyle Sides</h2>
-                    <div class="sides-grid">
-                        <div class="side-item"><h3>Mac & Cheese</h3><span style="color: #cc0000; font-weight: bold;">$3.99</span></div>
-                        <div class="side-item"><h3>Coleslaw</h3><span style="color: #cc0000; font-weight: bold;">$3.99</span></div>
-                        <div class="side-item"><h3>BBQ Beans</h3><span style="color: #cc0000; font-weight: bold;">$3.99</span></div>
-                        <div class="side-item"><h3>Potato Salad</h3><span style="color: #cc0000; font-weight: bold;">$3.99</span></div>
-                        <div class="side-item"><h3>French Fries</h3><span style="color: #cc0000; font-weight: bold;">$3.99</span></div>
-                        <div class="side-item"><h3>Onion Rings</h3><span style="color: #cc0000; font-weight: bold;">$4.99</span></div>
-                        <div class="side-item"><h3>Green Beans</h3><span style="color: #cc0000; font-weight: bold;">$3.99</span></div>
-                        <div class="side-item"><h3>Corn on the Cob</h3><span style="color: #cc0000; font-weight: bold;">$3.99</span></div>
-                        <div class="side-item"><h3>Cornbread</h3><span style="color: #cc0000; font-weight: bold;">$2.99</span></div>
-                        <div class="side-item"><h3>Mashed Potatoes</h3><span style="color: #cc0000; font-weight: bold;">$3.99</span></div>
-                        <div class="side-item"><h3>Baked Beans</h3><span style="color: #cc0000; font-weight: bold;">$3.99</span></div>
-                        <div class="side-item"><h3>Collard Greens</h3><span style="color: #cc0000; font-weight: bold;">$3.99</span></div>
-                    </div>
-                </section>
+                            <div class="double-rule"></div>
 
-                <section class="menu-category">
-                    <h2>Appetizers & Specials</h2>
-                    <div class="menu-item">
-                        <div><h3>Smoked Brisket Nachos</h3><p>Crispy tortilla chips topped with brisket, cheese, jalapeños, and sour cream</p></div>
-                        <span class="price-tag">$11.99</span>
-                    </div>
-                    <div class="menu-item">
-                        <div><h3>BBQ Ribs Starter</h3><p>Half pound of our signature smoked ribs</p></div>
-                        <span class="price-tag">$12.99</span>
-                    </div>
-                    <div class="menu-item">
-                        <div><h3>Smoked Turkey Legs</h3><p>Authentic smoked turkey leg with side of BBQ sauce</p></div>
-                        <span class="price-tag">$9.99</span>
-                    </div>
-                    <div class="menu-item">
-                        <div><h3>BBQ Sampler Platter</h3><p>A taste of our best - brisket, ribs, and pulled pork with two sides</p></div>
-                        <span class="price-tag">$24.99</span>
-                    </div>
-                </section>
+                            <h2 class="menu-section-title">Bar-B-Que Spuds</h2>
+                            <ul class="menu-items">
+                                <li><span><span class="name">Bar-B-Que Spud</span><span class="desc">Turkey breast, smoked chicken, pulled pork, sausage or spicy sausage</span></span><span class="price">12.99</span></li>
+                                <li class="dotted-box"><span><span class="name">Two Meat Combo Spud</span><span class="desc">Brisket, turkey breast, smoked chicken, pulled pork, sausage or spicy sausage</span></span><span class="price">15.79</span></li>
+                                <li><span><span class="name">Brisket Spud</span></span><span class="price">14.99</span></li>
+                                <li><span><span class="name">Grilled Chicken Spud</span></span><span class="price">14.99</span></li>
+                            </ul>
 
-                <div class="mt-8 bg-red-50 border-l-4 border-red-600 p-5 rounded-lg">
-                    <p class="text-xs uppercase tracking-widest text-red-700 font-bold mb-2">Customer review</p>
-                    <blockquote class="text-gray-700 italic leading-relaxed">
-                        "I haven't been here in over 20 years, but now I have a reason to visit more often; All you can eat pork ribs for $16.99 plus two sides. They tasted like candy, and very tender. All I can say is OMG I will see them next Tuesday as well."
-                    </blockquote>
-                    <p class="mt-3 text-sm text-gray-600">- Reeljoy</p>
-                    <a href="reviews.html#ribs-reviews" class="mt-2 inline-block text-sm text-red-700 font-semibold hover:text-red-800">Read the full ribs review</a>
-                </div>
+                            <div class="double-rule"></div>
 
-                <section class="menu-category">
-                    <h2>Beverages</h2>
-                    <div class="sides-grid">
-                        <div class="side-item"><h3>Soft Drinks</h3><span style="color: #cc0000; font-weight: bold;">$2.49</span></div>
-                        <div class="side-item"><h3>Iced Tea</h3><span style="color: #cc0000; font-weight: bold;">$2.49</span></div>
-                        <div class="side-item"><h3>Bottled Water</h3><span style="color: #cc0000; font-weight: bold;">$1.99</span></div>
-                        <div class="side-item"><h3>Coffee</h3><span style="color: #cc0000; font-weight: bold;">$2.29</span></div>
-                    </div>
-                </section>
+                            <h2 class="menu-section-title">Bar-B-Que Sandwiches</h2>
+                            <p class="menu-section-note">Sub a white sourdough bun, jalapeno cheese sourdough or po-boy bun for just .99</p>
+                            <ul class="menu-items">
+                                <li><span><span class="name">Bar-B-Que Sandwich</span><span class="desc">Turkey breast, pulled pork, sausage, spicy sausage, jalapeno cheese sausage or bar-b-que chicken<br>(with 1 side) 13.99 &nbsp; (with 2 sides) 16.99</span></span></li>
+                                <li><span><span class="name">Triple Threat</span><span class="desc">Pulled pork, spicy sausage, peppered bacon &amp; cheddar cheese on a jalapeno cheese bun<br>(with 1 side) 15.99 &nbsp; (with 2 sides) 18.99</span></span></li>
+                                <li class="dotted-box"><span><span class="name">Brisket Sandwich</span><span class="desc">Sliced or chopped<br>(with 1 side) 14.99 &nbsp; (with 2 sides) 17.99</span></span></li>
+                                <li><span><span class="name">The Memphis</span><span class="desc">Pulled pork, sourdough bun &amp; cole slaw<br>(with 1 side) 13.99 &nbsp; (with 2 sides) 16.99</span></span></li>
+                                <li><span><span class="name">Brisket Melt</span><span class="desc">Moist cut brisket, jalapeno cheese bun, cheddar cheese &amp; grilled onions<br>(with 1 side) 15.99 &nbsp; (with 2 sides) 18.99</span></span></li>
+                                <li class="dotted-box"><span><span class="name">Turkey Swiss</span><span class="desc">Smoked turkey breast, jalapeno cheese bun, Swiss cheese &amp; peppered bacon<br>(with 1 side) 14.99 &nbsp; (with 2 sides) 17.99</span></span></li>
+                            </ul>
+                        </section>
 
-                <section class="menu-category">
-                    <h2>Desserts</h2>
-                    <div class="menu-item">
-                        <div><h3>Peach Cobbler</h3><p>Warm, homemade peach cobbler with vanilla ice cream</p></div>
-                        <span class="price-tag">$4.99</span>
-                    </div>
-                    <div class="menu-item">
-                        <div><h3>Brownies</h3><p>Fresh baked chocolate brownies</p></div>
-                        <span class="price-tag">$3.99</span>
-                    </div>
-                    <div class="menu-item">
-                        <div><h3>Banana Pudding</h3><p>Traditional creamy banana pudding</p></div>
-                        <span class="price-tag">$4.49</span>
-                    </div>
-                </section>
+                        <section>
+                            <h2 class="menu-section-title">Salads &amp; Gumbo</h2>
+                            <ul class="menu-items">
+                                <li class="dotted-box"><span><span class="name">Salad Bar</span><span class="desc">All you can eat &nbsp; 10.99<br>with Chicken Tenders +4<br>with Bar-B-Que Chicken +4<br>with Grilled Chicken +5<br>with Smoked Turkey Breast +5</span></span></li>
+                                <li><span><span class="name">Side Salad</span><span class="desc">with entree</span></span><span class="price">5.99</span></li>
+                                <li><span><span class="name">Brisket Taco Salad</span><span class="desc">Refried beans, shredded lettuce, grated cheddar, chopped brisket, bar-b-que sauce &amp; sour cream</span></span><span class="price">15.99</span></li>
+                                <li><span><span class="name">Chicken &amp; Sausage Gumbo</span><span class="desc">White rice &amp; garlic bread</span></span><span class="price">12.99</span></li>
+                                <li><span><span class="name">Gumbo &amp; Salad Bar</span></span><span class="price">16.99</span></li>
+                            </ul>
 
-                <!-- CTA Section -->
-                <section class="bg-gradient-to-r from-[#cc0000] to-[#880000] rounded-2xl p-8 md:p-12 text-center text-white mt-12">
-                    <h2 class="text-3xl md:text-4xl font-oswald font-bold mb-4 uppercase">Ready to Order?</h2>
-                    <p class="text-lg md:text-xl mb-8">Get your BBQ fix delivered or pick it up!</p>
-                    <div class="flex flex-col md:flex-row gap-4 justify-center">
-                        <a href="https://order.redriverrestaurants.com/order/red-river-bbq-league-city-1911-e-main-st-suite-b" target="_blank" rel="nofollow noopener noreferrer" class="btn-modern inline-block px-8 py-4 text-white font-oswald font-bold uppercase rounded-lg text-lg animate-pulse-glow">
-                            Pick-Up Order
-                        </a>
-                        <a href="https://order.online/store/red-river-bbq-grill-league-city-72318?hideModal=true&pickup=true" target="_blank" rel="nofollow noopener noreferrer" class="btn-outline-modern inline-block px-8 py-4 text-white font-oswald font-bold uppercase rounded-lg text-lg relative z-10">
-                            Delivery Order
-                        </a>
+                            <div class="double-rule"></div>
+
+                            <h2 class="menu-section-title">Texas Bar-B-Que</h2>
+                            <p class="menu-section-note">Includes your choice of 2 sides &amp; a freshly baked yeast roll.<br>Substitute 2 sides for a baked potato for 1.99</p>
+                            <ul class="menu-items">
+                                <li><span><span class="name">Pulled Pork</span></span><span class="price">17.99</span></li>
+                                <li class="dotted-box"><span><span class="name">Brisket</span></span><span class="price">18.99</span></li>
+                                <li class="dotted-box"><span><span class="name">Turkey Breast</span></span><span class="price">17.99</span></li>
+                                <li class="dotted-box"><span><span class="name">Pork Ribs (8)</span></span><span class="price">18.99</span></li>
+                                <li><span><span class="name">1/2 Chicken</span></span><span class="price">17.99</span></li>
+                                <li><span><span class="name">Smoked Wings &amp; Ribs</span><span class="desc">4 smoked wings &amp; 3 pork ribs</span></span><span class="price">16.99</span></li>
+                                <li><span><span class="name">Sausage</span><span class="desc">regular or spicy</span></span><span class="price">16.99</span></li>
+                                <li class="dotted-box"><span><span class="name">Jalapeno Chz Sausage</span></span><span class="price">17.25</span></li>
+                                <li class="dotted-box"><span><span class="name">Two Meat Combo</span></span><span class="price">18.99</span></li>
+                                <li class="dotted-box"><span><span class="name">Three Meat Combo</span></span><span class="price">20.99</span></li>
+                            </ul>
+
+                            <div class="double-rule"></div>
+
+                            <h2 class="menu-section-title">Burgers &amp; Sandwiches</h2>
+                            <p class="menu-section-note">Fresh beef, ground in-house daily 1/2 lb burgers. Includes French fries.<br>Sub homemade Onion Rings +.99</p>
+                            <ul class="menu-items">
+                                <li><span><span class="name">Angus Burger</span><span class="desc">1855 Black Angus Beef</span></span><span class="price">13.99</span></li>
+                                <li class="dotted-box"><span><span class="name">Bacon Cheeseburger</span><span class="desc">Thick cut peppered bacon &amp; cheese</span></span><span class="price">15.99</span></li>
+                                <li><span><span class="name">Mushroom Swiss Burger</span><span class="desc">Sauteed mushrooms &amp; Swiss cheese</span></span><span class="price">14.99</span></li>
+                                <li class="dotted-box"><span><span class="name">Durango Burger</span><span class="desc">Pepper jack cheese, grilled onions, mushrooms &amp; jalapenos</span></span><span class="price">14.99</span></li>
+                                <li><span><span class="name">Smokehouse Burger</span><span class="desc">Cheddar cheese, grilled onions, peppered bacon &amp; our famous bar-b-que sauce</span></span><span class="price">15.99</span></li>
+                                <li class="dotted-box"><span><span class="name">Southwest Grilled Chicken Sandwich</span><span class="desc">Jalapeno cheese sourdough bun, pepper jack cheese &amp; grilled onions</span></span><span class="price">14.99</span></li>
+                                <li><span><span class="name">Grilled CK Sandwich</span><span class="desc">Topped with grilled onions</span></span><span class="price">13.99</span></li>
+                                <li><span><span class="name">Spicy Chicken Sandwich</span><span class="desc">Crispy chicken breast, Buffalo sauce, Swiss cheese, shredded lettuce, pickles &amp; mayo</span></span><span class="price">14.99</span></li>
+                                <li class="dotted-box"><span><span class="name">Jumbo Shrimp Po-Boy</span><span class="desc">5 hand battered Gulf shrimp, garlic toasted po-boy bun</span></span><span class="price">15.99</span></li>
+                            </ul>
+                        </section>
                     </div>
-                </section>
+
+                    <div class="side-band">
+                        <h3>Side Choices</h3>
+                        <div class="side-grid">
+                            <span>Mom's Potato Salad</span>
+                            <span>Pinto Beans</span>
+                            <span>Wild Rice</span>
+                            <span>Sweet Potato Fries</span>
+                            <span>Mashed Potatoes</span>
+                            <span>Green Beans</span>
+                            <span>Cream Corn</span>
+                            <span>French Fries</span>
+                            <span>Macaroni &amp; Cheese</span>
+                            <span>Baked Beans</span>
+                            <span>Macaroni Salad</span>
+                            <span>Fried Okra</span>
+                            <span>Corn on the Cob</span>
+                            <span>Cole Slaw</span>
+                            <span>Broccoli, Rice &amp; Cheese (new)</span>
+                            <span>Onion Rings +.99</span>
+                            <span>Miss Vickie's Chips: Sea Salt</span>
+                            <span>Miss Vickie's Chips: Bar-B-Que</span>
+                            <span>Miss Vickie's Chips: Jalapeno</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-sheet">
+                    <div class="menu-grid-2">
+                        <section>
+                            <h2 class="menu-section-title">Steak &amp; Chicken</h2>
+                            <p class="menu-section-note">Your choice of 2 sides &amp; salad bar<br>Substitute 2 sides for a baked potato 1.99</p>
+                            <ul class="menu-items">
+                                <li class="dotted-box"><span><span class="name">Chicken Fried Steak</span><span class="desc">Hand battered cutlet, golden fried &amp; served with homemade cream gravy</span></span><span class="price">20.99</span></li>
+                                <li><span><span class="name">Grilled Chicken Breast</span><span class="desc">Marinated chicken breast char-grilled &amp; topped with sauteed onions</span></span><span class="price">17.99</span></li>
+                                <li><span><span class="name">1855 Black Angus Ribeye</span><span class="desc">(12oz) 26.99 &nbsp; (16oz) 31.99</span></span></li>
+                                <li class="dotted-box"><span><span class="name">Pepper Jack Chicken</span><span class="desc">Grilled chicken breast, pepper jack cheese, sauteed mushrooms, onions &amp; jalapenos</span></span><span class="price">18.99</span></li>
+                                <li><span><span class="name">Chicken Fried Pork Chop</span><span class="desc">Hand battered boneless pork chop with homemade cream gravy</span></span><span class="price">19.99</span></li>
+                                <li><span><span class="name">Chicken Fried Chicken</span><span class="desc">Fresh hand battered chicken breast &amp; homemade cream gravy</span></span><span class="price">17.99</span></li>
+                                <li class="dotted-box"><span><span class="name">Crispy Chicken Tenders</span><span class="desc">Fresh hand battered tenders with two sides. Salad bar not included<br>Original Crispy, Buffalo or Garlic Parmesan</span></span><span class="price">15.99</span></li>
+                                <li class="dotted-box"><span><span class="name">Add 4 Shrimp Fried or Grilled</span></span><span class="price">6.99</span></li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h2 class="menu-section-title">Fish &amp; Shrimp</h2>
+                            <p class="menu-section-note">Your choice of two sides.<br>Substitute two sides for a baked potato 1.99</p>
+                            <ul class="menu-items">
+                                <li class="dotted-box"><span><span class="name">Jumbo Gulf Fried Shrimp</span><span class="desc">Jumbo Gulf shrimp, hand battered &amp; fried to a golden brown. Includes homemade hushpuppies<br>(6pc) 17.99 &nbsp; (8pc) 20.99</span></span></li>
+                                <li><span><span class="name">Mississippi Fried Catfish</span><span class="desc">Two fresh fillets fried to a golden brown. Includes hushpuppies</span></span><span class="price">19.99</span></li>
+                                <li><span><span class="name">Grilled Shrimp Skewer</span><span class="desc">8 fresh jumbo shrimp served over a bed of wild rice with your choice of 2 sides &amp; a homemade yeast roll</span></span><span class="price">20.99</span></li>
+                                <li><span><span class="name">Shrimp &amp; Catfish Combo</span><span class="desc">Four jumbo Gulf fried shrimp and a hand battered catfish fillet. Includes homemade hushpuppies</span></span><span class="price">20.99</span></li>
+                                <li class="dotted-box"><span><span class="name">Fried Shrimp &amp; Chicken Tenders</span><span class="desc">3 hand battered tenders &amp; 4 jumbo Gulf fried shrimp</span></span><span class="price">19.99</span></li>
+                                <li class="dotted-box"><span><span class="name">Blackened Redfish</span><span class="desc">Texas redfish fillet, blackened</span></span><span class="price">20.99</span></li>
+                                <li><span><span class="name">Blackened Redfish &amp; Shrimp</span><span class="desc">Blackened Texas redfish &amp; 4 jumbo Gulf grilled shrimp over wild rice</span></span><span class="price">26.99</span></li>
+                                <li class="dotted-box"><span><span class="name">Add a Side Salad to any entree</span></span><span class="price">5.99</span></li>
+                            </ul>
+                        </section>
+                    </div>
+
+                    <p class="menu-warning">Consuming raw or undercooked meats, poultry, seafood, shellfish or eggs may increase the risk of foodborne illness.</p>
+
+                    <div class="menu-grid-2">
+                        <section>
+                            <h2 class="menu-section-title">Kid's Menu</h2>
+                            <p class="menu-section-note">12 &amp; under. Kid drink is included.</p>
+                            <ul class="menu-items">
+                                <li><span><span class="name">Mac &amp; Cheese</span><span class="desc">with fries</span></span><span class="price">7.99</span></li>
+                                <li><span><span class="name">Bar-B-Que Plate</span><span class="desc">with 2 sides<br>with Brisket +2</span></span><span class="price">8.99</span></li>
+                                <li><span><span class="name">Hamburger</span><span class="desc">with fries</span></span><span class="price">7.99</span></li>
+                                <li><span><span class="name">Grilled Cheese</span><span class="desc">with fries</span></span><span class="price">7.99</span></li>
+                                <li><span><span class="name">Chicken Nuggets</span><span class="desc">with fries</span></span><span class="price">7.99</span></li>
+                                <li><span><span class="name">Corn Dog</span><span class="desc">with fries</span></span><span class="price">7.99</span></li>
+                                <li><span><span class="name">Bar-B-Que Sandwich</span><span class="desc">with fries<br>with Brisket +1</span></span><span class="price">7.99</span></li>
+                            </ul>
+
+                            <div class="double-rule"></div>
+
+                            <h2 class="menu-section-title">Lunch Specials</h2>
+                            <p class="menu-section-note">Monday - Friday &nbsp; 11:00am - 3:00pm</p>
+                            <ul class="menu-items dotted-box">
+                                <li><span><span class="name">#1 &nbsp; 1/2 LB Angus Burger</span><span class="desc">with fries</span></span><span class="price">12.99</span></li>
+                                <li><span><span class="name">#2 &nbsp; Chopped Brisket Sandwich</span><span class="desc">with fries</span></span><span class="price">12.99</span></li>
+                                <li><span><span class="name">#3 &nbsp; Chicken Tenders</span><span class="desc">(4 pc) with fries</span></span><span class="price">12.99</span></li>
+                                <li><span><span class="name">#4 &nbsp; Jumbo Fried Shrimp</span><span class="desc">(6pc) with fries &amp; slaw</span></span><span class="price">14.99</span></li>
+                                <li><span><span class="name">#5 &nbsp; Chicken Fried Steak</span><span class="desc">with two sides &amp; a dinner roll</span></span><span class="price">15.99</span></li>
+                                <li><span><span class="name">#6 &nbsp; Sausage &amp; Chicken</span><span class="desc">combo plate with two sides</span></span><span class="price">15.99</span></li>
+                                <li><span><span class="name">#7 &nbsp; Chopped Brisket Spud</span><span class="desc">with butter, cheese &amp; s/c</span></span><span class="price">12.99</span></li>
+                                <li><span><span class="name">#8 &nbsp; Salad Bar &amp; Smoked Turkey Breast</span></span><span class="price">13.99</span></li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h2 class="menu-section-title">Desserts</h2>
+                            <p class="menu-section-note">Made In-House Daily!</p>
+                            <ul class="menu-items">
+                                <li><span><span class="name">Peach Cobbler</span><span class="desc">&amp; ice cream</span></span><span class="price">5.99</span></li>
+                                <li><span><span class="name">Banana Pudding</span></span><span class="price">5.99</span></li>
+                                <li><span><span class="name">Cherry Cobbler</span><span class="desc">&amp; ice cream</span></span><span class="price">5.99</span></li>
+                                <li><span><span class="name">Homemade Brownies</span></span><span class="price">2.75</span></li>
+                                <li><span><span class="name">Pecan Cobbler</span><span class="desc">&amp; ice cream</span></span><span class="price">6.99</span></li>
+                                <li><span><span class="name">Cookie Brownie Bar</span></span><span class="price">2.99</span></li>
+                                <li><span><span class="name">Chocolate Chip Cookie</span></span><span class="price">1.75</span></li>
+                            </ul>
+
+                            <div class="double-rule"></div>
+
+                            <h2 class="menu-section-title">Daily Specials</h2>
+                            <ul class="menu-items dotted-box">
+                                <li><span><span class="name">Monday - Chicken Fried Steak</span><span class="desc">with two sides &amp; salad bar</span></span><span class="price">17.99</span></li>
+                                <li><span><span class="name">Tuesday - All You Can Eat Ribs</span><span class="desc">with two sides</span></span><span class="price">22.99</span></li>
+                                <li><span><span class="name">Wednesday - Dozen Fried Shrimp</span><span class="desc">Jumbo fried shrimp &amp; two sides</span></span><span class="price">21.99</span></li>
+                                <li><span><span class="name">Thursday - Baby Back Ribs</span><span class="desc">1/2 rack &amp; your choice of 2 sides</span></span><span class="price">18.99</span></li>
+                                <li><span><span class="name">Friday - Ribeye Specials</span><span class="desc">with two sides, salad bar &amp; dinner roll<br>(10oz) 19.99 &nbsp; (16oz) 26.99</span></span></li>
+                                <li><span><span class="name">Saturday - All You Can Eat Ribs</span><span class="desc">with two sides</span></span><span class="price">22.99</span></li>
+                                <li><span><span class="name">Sunday - Chicken Fried Pork Chop</span><span class="desc">Boneless pork chop, two sides &amp; salad bar</span></span><span class="price">17.99</span></li>
+                            </ul>
+                        </section>
+                    </div>
+                </article>
             </div>
         </section>
     </main>
@@ -748,7 +849,7 @@
                     <a href="index.html" class="transition-all duration-500 group-hover:scale-110 group-hover:drop-shadow-[0_0_30px_rgba(220,38,38,0.5)]">
                         <img src="images/RRBBQBrand.png" alt="Red River BBQ & Grill - League City" class="h-24 md:h-28 w-auto" />
                     </a>
-                    <p class="text-xs text-gray-400 mt-2 uppercase tracking-wide">League City TX</p>
+                    <p class="text-xs text-white mt-2 uppercase tracking-wide">League City TX</p>
                 </div>
 
                 <!-- Brand League City TX -->
@@ -756,7 +857,7 @@
                     <div class="transition-all duration-500 group-hover:scale-110 group-hover:drop-shadow-[0_0_30px_rgba(0,167,157,0.6)]">
                         <img src="images/brand.png" alt="Location - League City TX" class="h-24 md:h-28 w-auto" />
                     </div>
-                    <p class="text-xs text-gray-400 mt-2 uppercase tracking-wide">League City TX</p>
+                    <p class="text-xs text-white mt-2 uppercase tracking-wide">League City TX</p>
                 </div>
 
                 <!-- Brand Richmond TX -->
@@ -764,7 +865,7 @@
                     <a href="#" class="transition-all duration-500 group-hover:scale-110 group-hover:drop-shadow-[0_0_30px_rgba(0,167,157,0.6)]">
                         <img src="images/brand.png" alt="Location - Richmond TX" class="h-24 md:h-28 w-auto" />
                     </a>
-                    <p class="text-xs text-gray-400 mt-2 uppercase tracking-wide">Richmond TX</p>
+                    <p class="text-xs text-white mt-2 uppercase tracking-wide">Richmond TX</p>
                 </div>
 
                 <!-- BBQ Burger Upscale Katy TX -->
@@ -772,7 +873,7 @@
                     <a href="#" class="transition-all duration-500 group-hover:scale-110 group-hover:drop-shadow-[0_0_30px_rgba(220,38,38,0.5)]">
                         <img src="images/BBQ BURGER UPSCALE trans.png" alt="BBQ Burger Upscale - Katy TX" class="h-24 md:h-28 w-auto" />
                     </a>
-                    <p class="text-xs text-gray-400 mt-2 uppercase tracking-wide">Katy TX</p>
+                    <p class="text-xs text-white mt-2 uppercase tracking-wide">Katy TX</p>
                 </div>
 
                 <!-- Kiersh Co -->
@@ -796,7 +897,7 @@
                 <i data-lucide="heart" class="w-4 h-4"></i> Community
             </a>
             <a href="reviews.html" class="glass px-4 py-2 rounded-full text-sm hover:bg-white/20 transition-all flex items-center gap-2">
-                <i data-lucide="star" class="w-4 h-4"></i> ⭐ Customer Reviews
+                <i data-lucide="star" class="w-4 h-4"></i> ­ Customer Reviews
             </a>
             <a href="https://www.toasttab.com/red-river-bbq-league-city-1911-e-main-st-suite-b/marketing-signup" target="_blank" rel="noopener noreferrer" class="glass px-4 py-2 rounded-full text-sm hover:bg-white/20 transition-all flex items-center gap-2">
                 <i data-lucide="mail" class="w-4 h-4"></i> E-Club
@@ -804,9 +905,9 @@
         </div>
 
         <!-- Copyright -->
-        <div class="mt-12 text-center text-xs text-black uppercase tracking-widest">
+        <div class="mt-12 text-center text-xs text-white uppercase tracking-widest">
             &copy; 2026 Red River BBQ & Grill. All Rights Reserved.
-            <p class="mt-2 text-black normal-case tracking-normal">Made with <span class="text-red-500">♥</span> in Texas | Riva Strategies</p>
+            <p class="mt-2 text-white normal-case tracking-normal">Made with <span class="text-red-500">♥</span> in Texas | <a href="https://rivastrategies.com" target="_blank" rel="noopener noreferrer" class="hover:text-yellow-400 transition-colors">Riva Strategies</a></p>
         </div>
     </footer>
 
