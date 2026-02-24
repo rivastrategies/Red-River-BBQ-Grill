@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -659,20 +659,9 @@
     <!-- MAIN CONTENT -->
     <main class="flex-grow">
         <!-- Hero Section -->
-        <section class="relative w-full overflow-hidden" style="height:300px;">
+        <section class="relative h-[300px] md:h-[500px] w-full overflow-hidden">
             <img src="images/Red River BBQ &amp; Grill Hero image food.png" alt="Red River BBQ &amp; Grill Catering" class="w-full h-full object-cover" />
             <div class="absolute inset-0 bg-black/45"></div>
-            <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-                <h1 class="text-white text-4xl md:text-6xl font-oswald font-black uppercase tracking-widest mb-2 drop-shadow-lg">
-                    CATERING MENU
-                </h1>
-                <p class="text-white/90 text-sm md:text-base drop-shadow">
-                    League City: 281-332-8086 &nbsp;&bull;&nbsp; Katy: 281-578-3800 &nbsp;&bull;&nbsp; www.RedRiverBBQ.com
-                </p>
-                <button onclick="document.getElementById('booking-form').scrollIntoView({behavior:'smooth'})" class="mt-4 btn-modern px-8 py-3 text-white font-oswald font-bold uppercase tracking-wider rounded-lg">
-                    <i data-lucide="calendar" class="w-4 h-4 inline mr-1"></i> Book Catering
-                </button>
-            </div>
         </section>
 
         <!-- Catering Menu Board -->
@@ -1201,7 +1190,7 @@
                 <!-- Kiersh Co -->
                 <div class="flex flex-col items-center group cursor-pointer">
                     <a href="https://kiershcateringevents.com/" target="_blank" rel="noopener noreferrer" class="transition-all duration-500 group-hover:scale-110 group-hover:drop-shadow-[0_0_30px_rgba(255,255,255,0.6)]">
-                        <img src="images/Kiersh-Co-Transparent-PNG.png" alt="Kiersh Catering" class="h-20 md:h-24 w-auto opacity-100 brightness-125" />
+                        <img src="images/kiersh co white trans.png" alt="Kiersh Catering" class="h-32 md:h-40 w-auto opacity-100 brightness-125" />
                     </a>
                 </div>
             </div>
@@ -1232,11 +1221,6 @@
             <p class="mt-2 text-white normal-case tracking-normal">Made with <span class="text-red-500">♥</span> in Texas | <a href="https://rivastrategies.com" target="_blank" rel="noopener noreferrer" class="hover:text-yellow-400 transition-colors">Riva Strategies</a></p>
         </div>
     </footer>
-
-    <!-- Scroll to top button -->
-    <button id="scroll-to-top" class="fixed bottom-8 right-4 md:right-8 w-12 h-12 bg-gradient-to-br from-red-600 to-red-800 text-white rounded-full shadow-lg hover:shadow-red-500/50 transition-all duration-300 opacity-0 pointer-events-none translate-y-4 flex items-center justify-center hover:scale-110 z-50" title="Go to top">
-        <i data-lucide="chevron-up" class="w-6 h-6"></i>
-    </button>
 
     <!-- Order Modal -->
     <div id="orderModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden">
@@ -1296,19 +1280,6 @@
                 closeOrderModal();
             }
         });
-
-        // ===== Scroll to Top Button =====
-        const scrollBtn = document.getElementById('scroll-to-top');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                scrollBtn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
-                scrollBtn.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
-            } else {
-                scrollBtn.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
-                scrollBtn.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
-            }
-        });
-        scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
         // ===== Mobile Menu Toggle =====
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
@@ -1419,5 +1390,9 @@
             return false;
         }
     </script>
+    <!-- Sticky Order Online Button -->
+    <div class="fixed bottom-6 right-6 z-50 group">
+        <button onclick="openOrderModal()" class="btn-modern animate-pulse-glow text-white font-oswald font-bold uppercase tracking-wider px-6 py-3 rounded-full text-sm">Order Online</button>
+    </div>
 </body>
 </html>

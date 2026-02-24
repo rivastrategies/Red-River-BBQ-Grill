@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -392,7 +392,7 @@
             grid-template-columns: 1fr;
             gap: 1rem;
         }
-        @media (min-width: 640px) {
+        @media (min-width: 1280px) {
             .pr-dessert-grid { grid-template-columns: repeat(3, 1fr); }
         }
         .pr-dessert-card {
@@ -634,21 +634,6 @@
                 class="w-full h-full object-cover"
             />
             <div class="absolute inset-0 bg-black/30"></div>
-            
-            <div class="absolute inset-0 flex items-center justify-center text-center px-4">
-                <div class="max-w-4xl mx-auto">
-                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-oswald font-bold text-white mb-4 animate-fadeInDown">
-                        PARTY ROOM
-                    </h1>
-                    <p class="text-lg md:text-xl text-gray-300 animate-fadeInUp delay-200">
-                        Host Your Next Event with Authentic Texas BBQ
-                    </p>
-                    <button onclick="openPartyRoomModal()" class="mt-8 inline-block btn-modern text-white font-oswald font-bold uppercase text-lg px-8 py-4 rounded-lg shadow-xl animate-fadeInUp delay-300">
-                        <i data-lucide="calendar" class="inline-block w-5 h-5 mr-2"></i>
-                        Inquire or Book a Private Party
-                    </button>
-                </div>
-            </div>
         </section>
 
         <!-- BOARD CONTENT -->
@@ -878,7 +863,7 @@
                 <!-- Kiersh Co -->
                 <div class="flex flex-col items-center group cursor-pointer">
                     <a href="https://kiershcateringevents.com/" target="_blank" rel="noopener noreferrer" class="transition-all duration-500 group-hover:scale-110 group-hover:drop-shadow-[0_0_30px_rgba(255,255,255,0.6)]">
-                        <img src="images/Kiersh-Co-Transparent-PNG.png" alt="Kiersh Catering" class="h-20 md:h-24 w-auto opacity-100 brightness-125" />
+                        <img src="images/kiersh co white trans.png" alt="Kiersh Catering" class="h-32 md:h-40 w-auto opacity-100 brightness-125" />
                     </a>
                 </div>
             </div>
@@ -1142,5 +1127,9 @@
             setTimeout(revealOnScroll, 100);
         });
     </script>
+    <!-- Sticky Order Online Button -->
+    <div class="fixed bottom-6 right-6 z-50 group">
+        <button onclick="openOrderModal()" class="btn-modern animate-pulse-glow text-white font-oswald font-bold uppercase tracking-wider px-6 py-3 rounded-full text-sm">Order Online</button>
+    </div>
 </body>
 </html>

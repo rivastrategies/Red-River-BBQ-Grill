@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -262,16 +262,6 @@
                 class="w-full h-full object-cover"
             />
             <div class="absolute inset-0 bg-black/45"></div>
-            <div class="absolute inset-0 flex items-center justify-center text-center px-4">
-                <div class="max-w-4xl mx-auto">
-                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold uppercase text-white mb-3" style="font-family:'Oswald',sans-serif; letter-spacing:0.04em; text-shadow:0 2px 12px rgba(0,0,0,.6);">
-                        To-Go Menu
-                    </h1>
-                    <p class="text-lg md:text-xl text-gray-200" style="font-family:'Open Sans',sans-serif;">
-                        Order Online at <span class="font-bold text-yellow-300">RedRiverBBQ.com</span> &nbsp;|&nbsp; Prices include a packaging charge
-                    </p>
-                </div>
-            </div>
         </section>
 
         <section class="px-4 py-8 md:py-12">
@@ -687,7 +677,7 @@
                 <!-- Kiersh Co -->
                 <div class="flex flex-col items-center group cursor-pointer">
                     <a href="https://kiershcateringevents.com/" target="_blank" rel="noopener noreferrer" class="transition-all duration-500 group-hover:scale-110 group-hover:drop-shadow-[0_0_30px_rgba(255,255,255,0.6)]">
-                        <img src="images/Kiersh-Co-Transparent-PNG.png" alt="Kiersh Catering" class="h-20 md:h-24 w-auto opacity-100 brightness-125" />
+                        <img src="images/kiersh co white trans.png" alt="Kiersh Catering" class="h-32 md:h-40 w-auto opacity-100 brightness-125" />
                     </a>
                 </div>
             </div>
@@ -718,11 +708,6 @@
             <p class="mt-2 text-white normal-case tracking-normal">Made with <span class="text-red-500">♥</span> in Texas | <a href="https://rivastrategies.com" target="_blank" rel="noopener noreferrer" class="hover:text-yellow-400 transition-colors">Riva Strategies</a></p>
         </div>
     </footer>
-
-    <!-- Scroll to top button -->
-    <button id="scroll-to-top" class="fixed bottom-8 right-4 md:right-8 w-12 h-12 bg-gradient-to-br from-red-600 to-red-800 text-white rounded-full shadow-lg hover:shadow-red-500/50 transition-all duration-300 opacity-0 pointer-events-none translate-y-4 flex items-center justify-center hover:scale-110 z-50" title="Go to top">
-        <i data-lucide="chevron-up" class="w-6 h-6"></i>
-    </button>
 
     <!-- Order Modal -->
     <div id="orderModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden">
@@ -780,5 +765,9 @@
         window.addEventListener('resize', () => { if (window.innerWidth >= 768 && body.classList.contains('mobile-menu-active')) closeMobileMenu(); });
         document.addEventListener('DOMContentLoaded', () => setTimeout(revealOnScroll, 100));
     </script>
+    <!-- Sticky Order Online Button -->
+    <div class="fixed bottom-6 right-6 z-50 group">
+        <button onclick="openOrderModal()" class="btn-modern animate-pulse-glow text-white font-oswald font-bold uppercase tracking-wider px-6 py-3 rounded-full text-sm">Order Online</button>
+    </div>
 </body>
 </html>
