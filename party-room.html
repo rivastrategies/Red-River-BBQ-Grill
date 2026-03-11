@@ -285,6 +285,7 @@
             box-shadow: 0 6px 18px rgba(0,0,0,0.10);
             padding: 1.5rem;
             margin-bottom: 1.5rem;
+            overflow: hidden;
         }
         .pr-section-title {
             font-family: 'Oswald', sans-serif;
@@ -392,7 +393,7 @@
             grid-template-columns: 1fr;
             gap: 1rem;
         }
-        @media (min-width: 1280px) {
+        @media (min-width: 640px) {
             .pr-dessert-grid { grid-template-columns: repeat(3, 1fr); }
         }
         .pr-dessert-card {
@@ -401,10 +402,12 @@
             border-radius: 10px;
             padding: 1rem;
             text-align: center;
+            overflow: hidden;
+            word-wrap: break-word;
         }
         .pr-dessert-name {
             font-family: 'Oswald', sans-serif;
-            font-size: 1rem;
+            font-size: 0.9rem;
             font-weight: 700;
             color: #1a3a6b;
             text-transform: uppercase;
@@ -660,38 +663,38 @@
                 <!-- Texas Bar-B-Que Meals -->
                 <div class="pr-sheet">
                     <div class="pr-section-title">Texas Bar-B-Que Meals</div>
-                    <p class="pr-includes"><strong>All meals include:</strong> Choice of 2 Sides, Pickles, Onions, Jalapenos, Sliced Bread &amp; Bar-B-Que Sauce</p>
-                    <p class="pr-includes text-xs text-gray-500 italic mb-3">Choose from: Brisket, Sausage (reg or spicy), Pulled Pork, Bone-in Chicken, Turkey Breast or Pork Ribs</p>
+                    <p class="pr-includes"><strong>Lunch prices are available Monday – Friday 11am – 3pm</strong></p>
                     <div class="pr-meal-grid">
                         <div class="pr-meal-card">
                             <p class="pr-meal-name">The Slim</p>
-                            <p class="pr-meal-sub">1 Meat</p>
-                            <div class="pr-price-row"><span class="pr-price-label">10–14 people</span><span class="pr-price-val">$145</span></div>
-                            <div class="pr-price-row"><span class="pr-price-label">15–19 people</span><span class="pr-price-val">$195</span></div>
-                            <div class="pr-price-row"><span class="pr-price-label">20–24 people</span><span class="pr-price-val">$245</span></div>
-                            <div class="pr-price-row"><span class="pr-price-label">25–29 people</span><span class="pr-price-val">$285</span></div>
-                            <div class="pr-price-row"><span class="pr-price-label">30+ people</span><span class="pr-price-val">$9.50/person</span></div>
+                            <p class="pr-meal-sub">Choice of two meats and two sides</p>
+                            <div class="pr-price-row"><span class="pr-price-label">Lunch</span><span class="pr-price-val">$16.95</span></div>
+                            <div class="pr-price-row"><span class="pr-price-label">Dinner</span><span class="pr-price-val">$19.95</span></div>
                         </div>
                         <div class="pr-meal-card">
                             <p class="pr-meal-name">The Boss</p>
-                            <p class="pr-meal-sub">2 Meats</p>
-                            <div class="pr-price-row"><span class="pr-price-label">10–14 people</span><span class="pr-price-val">$175</span></div>
-                            <div class="pr-price-row"><span class="pr-price-label">15–19 people</span><span class="pr-price-val">$235</span></div>
-                            <div class="pr-price-row"><span class="pr-price-label">20–24 people</span><span class="pr-price-val">$295</span></div>
-                            <div class="pr-price-row"><span class="pr-price-label">25–29 people</span><span class="pr-price-val">$345</span></div>
-                            <div class="pr-price-row"><span class="pr-price-label">30+ people</span><span class="pr-price-val">$11.50/person</span></div>
+                            <p class="pr-meal-sub">Choice of three meats &amp; three sides</p>
+                            <div class="pr-price-row"><span class="pr-price-label">Lunch</span><span class="pr-price-val">$18.95</span></div>
+                            <div class="pr-price-row"><span class="pr-price-label">Dinner</span><span class="pr-price-val">$21.95</span></div>
                         </div>
                         <div class="pr-meal-card">
-                            <p class="pr-meal-name">The Trail Blazer</p>
-                            <p class="pr-meal-sub">3 Meats</p>
-                            <div class="pr-price-row"><span class="pr-price-label">10–14 people</span><span class="pr-price-val">$205</span></div>
-                            <div class="pr-price-row"><span class="pr-price-label">15–19 people</span><span class="pr-price-val">$275</span></div>
-                            <div class="pr-price-row"><span class="pr-price-label">20–24 people</span><span class="pr-price-val">$345</span></div>
-                            <div class="pr-price-row"><span class="pr-price-label">25–29 people</span><span class="pr-price-val">$405</span></div>
-                            <div class="pr-price-row"><span class="pr-price-label">30+ people</span><span class="pr-price-val">$13.50/person</span></div>
+                            <p class="pr-meal-name">Trail Blazer</p>
+                            <p class="pr-meal-sub">Choice of two meats, pork ribs &amp; three sides</p>
+                            <div class="pr-price-row"><span class="pr-price-label">Lunch</span><span class="pr-price-val">$19.95</span></div>
+                            <div class="pr-price-row"><span class="pr-price-label">Dinner</span><span class="pr-price-val">$22.95</span></div>
                         </div>
                     </div>
-                    <div class="meats-note">Minimum 10 guests. Plates, utensils &amp; napkins included with all orders.</div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                        <div class="bg-white border border-gray-300 rounded-lg p-3">
+                            <p class="text-xs font-bold text-gray-700 uppercase tracking-wide mb-2">Meat Choices:</p>
+                            <p class="text-sm text-gray-600">Brisket, Sausage (Reg or Spicy), Chicken, Turkey Breast &amp; Pulled Pork</p>
+                        </div>
+                        <div class="bg-white border border-gray-300 rounded-lg p-3">
+                            <p class="text-xs font-bold text-gray-700 uppercase tracking-wide mb-2">Side Choices:</p>
+                            <p class="text-sm text-gray-600">Potato Salad, Pinto Beans, Baked Beans, Mac &amp; Cheese, Wild Rice, Cole Slaw, Mashed Potatoes, Cream Corn &amp; Green Beans</p>
+                        </div>
+                    </div>
+                    <div class="meats-note">Pricing per person includes the room &amp; non-alcoholic beverages. 15% Gratuity will be added.</div>
                 </div>
 
                 <!-- Heavy Hors D'oeuvres + Desserts -->
@@ -700,29 +703,31 @@
                     <!-- Heavy Hors D'oeuvres -->
                     <div class="pr-sheet" style="margin-bottom:0;">
                         <div class="pr-section-title">Heavy Hors D&apos;oeuvres</div>
-                        <p class="text-center text-xs text-gray-500 italic mb-3">Perfect for cocktail-style gatherings &mdash; minimum 20 guests</p>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <p class="text-center text-xs text-gray-600 mb-3">Ideal for events when mingling with guests is important. Customize your menu by selecting five or more of the following items. Please contact our banquet and events coordinator for more info &amp; pricing.</p>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                             <div class="pr-hd-box">
-                                <p class="text-xs font-bold text-gray-700 uppercase tracking-wide mb-2">Choose Your Items:</p>
                                 <ul class="pr-hd-list">
-                                    <li>BBQ Sliders (Brisket, Pulled Pork, or Sausage)</li>
-                                    <li>Smoked Chicken Wings</li>
-                                    <li>Mini Baked Potatoes with Toppings</li>
-                                    <li>BBQ Nachos</li>
-                                    <li>Stuffed Jalapenos</li>
-                                    <li>Fried Pickles</li>
+                                    <li>Baby Back Ribs</li>
+                                    <li>Texas Hushpuppies</li>
+                                    <li>Shrimp Poppers</li>
+                                    <li>Boneless Chicken Bites</li>
+                                    <li>Mini Bar-B-Que Meatballs</li>
+                                    <li>Cheese &amp; Crackers</li>
                                 </ul>
                             </div>
-                            <div class="pr-hd-pricing">
-                                <p class="text-xs font-bold text-gray-700 uppercase tracking-wide mb-2">Pricing:</p>
-                                <div class="pr-hd-price-item">
-                                    <span>Choose 3 items</span>
-                                    <span class="pr-hd-price-val">$8.50/person</span>
-                                </div>
-                                <div class="pr-hd-price-item">
-                                    <span>Choose 4 items</span>
-                                    <span class="pr-hd-price-val">$10.50/person</span>
-                                </div>
+                            <div class="pr-hd-box">
+                                <ul class="pr-hd-list">
+                                    <li>Cheese &amp; Crackers</li>
+                                    <li>Assortment of Fruit &amp; Veggies</li>
+                                </ul>
+                            </div>
+                            <div class="pr-hd-box">
+                                <p class="text-xs font-bold text-[#cc0000] uppercase tracking-wide mb-2">Action Stations:</p>
+                                <ul class="pr-hd-list">
+                                    <li>Brisket &amp; Turkey Sliders</li>
+                                    <li>Mashed Potato Bar</li>
+                                    <li>Brisket Mac &amp; Cheese Bar</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
