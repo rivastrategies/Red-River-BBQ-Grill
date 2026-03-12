@@ -1559,14 +1559,20 @@
                         }
                     });
 
-                    if (!response.ok) {
-                        throw new Error('Form submission failed');
+                    const result = await response.json().catch(() => ({}));
+
+                    if (!response.ok || result.ok === false) {
+                        const firstError = result && Array.isArray(result.errors) && result.errors.length > 0
+                            ? result.errors[0].message
+                            : null;
+                        throw new Error(firstError || 'Form submission failed');
                     }
 
                     alert('Thanks for contacting Red River BBQ about Careers. Our team will follow up shortly.');
                     careerForm.reset();
                 } catch (error) {
-                    alert('There was a problem submitting your request. Please try again in a moment.');
+                    console.error('Careers form submission error:', error);
+                    alert('There was a problem submitting your request: ' + error.message);
                 } finally {
                     if (submitButton) {
                         submitButton.disabled = false;
