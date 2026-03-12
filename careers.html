@@ -1542,6 +1542,12 @@
             careerForm.addEventListener('submit', async function(e) {
                 e.preventDefault();
 
+                // Ensure native required-field validation runs before async submit.
+                if (!careerForm.reportValidity()) {
+                    alert('Please complete all required fields before submitting.');
+                    return;
+                }
+
                 const submitButton = careerForm.querySelector('button[type="submit"]');
                 const originalButtonText = submitButton ? submitButton.textContent : '';
 
