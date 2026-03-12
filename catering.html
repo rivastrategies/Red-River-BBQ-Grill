@@ -1240,16 +1240,7 @@
 
             <!-- Form Content -->
             <div class="p-8">
-                <form id="cateringForm" onsubmit="return handleCateringSubmit(event)">
-                    <!-- LOCATION -->
-                    <div style="margin-bottom: 1.5rem;">
-                        <label style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: #333;" for="cateringLocation">Location *</label>
-                        <select style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 0.375rem; font-size: 1rem;" id="cateringLocation" name="location" required>
-                            <option value="">Select Location</option>
-                            <option value="League City">League City</option>
-                        </select>
-                    </div>
-
+                <form id="cateringForm" method="POST" action="https://formspree.io/f/mkoqbbop">
                     <!-- NAME FIELDS -->
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
                         <div>
@@ -1318,6 +1309,9 @@
                         <label style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: #333;" for="cateringMessage">Message *</label>
                         <textarea style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 0.375rem; font-size: 1rem; min-height: 120px;" id="cateringMessage" name="message" placeholder="Tell us about your event" required></textarea>
                     </div>
+
+                    <input type="hidden" name="_subject" value="Red River BBQ Catering Inquiry">
+                    <input type="hidden" name="_autoresponse" value="Thanks for contacting Red River BBQ about Catering. Our team will follow up shortly.">
 
                     <!-- SUBMIT BUTTON -->
                     <div style="text-align: center; padding-top: 1.5rem; border-top: 1px solid #ddd;">
@@ -1430,43 +1424,63 @@
         document.head.appendChild(style);
 
         // ===== Form Submission Handler =====
-        function handleCateringSubmit(event) {
-            event.preventDefault();
-            
-            const email = document.getElementById('cateringEmail').value;
-            const confirmEmail = document.getElementById('cateringConfirmEmail').value;
+        const cateringForm = document.getElementById('cateringForm');
+        if (cateringForm) {
+            cateringForm.addEventListener('submit', async function(event) {
+                event.preventDefault();
 
-            // Validate email match
-            if (email !== confirmEmail) {
-                alert('Email addresses do not match. Please check and try again.');
-                return false;
-            }
+                if (!cateringForm.reportValidity()) {
+                    alert('Please complete all required fields before submitting.');
+                    return;
+                }
 
-            // Collect form data
-            const formData = {
-                location: document.getElementById('cateringLocation').value,
-                firstName: document.getElementById('cateringFirstName').value,
-                lastName: document.getElementById('cateringLastName').value,
-                email: email,
-                phone: document.getElementById('cateringPhone').value,
-                partySize: document.getElementById('cateringPartySize').value,
-                eventType: document.getElementById('cateringEventType').value,
-                eventDate: document.getElementById('cateringEventDate').value,
-                eventTime: document.getElementById('cateringEventTime').value,
-                message: document.getElementById('cateringMessage').value
-            };
+                const email = document.getElementById('cateringEmail').value;
+                const confirmEmail = document.getElementById('cateringConfirmEmail').value;
 
-            // Here you would typically send the data to a server
-            console.log('Form submitted:', formData);
-            
-            // Show success message
-            alert('Thank you for your catering inquiry! Our Event Coordinator will contact you shortly.');
-            
-            // Reset form and close modal
-            event.target.reset();
-            closeCateringModal();
-            
-            return false;
+                if (email !== confirmEmail) {
+                    alert('Email addresses do not match. Please check and try again.');
+                    return;
+                }
+
+                const submitButton = cateringForm.querySelector('button[type="submit"]');
+                const originalButtonText = submitButton ? submitButton.textContent : '';
+
+                try {
+                    if (submitButton) {
+                        submitButton.disabled = true;
+                        submitButton.textContent = 'Submitting...';
+                    }
+
+                    const response = await fetch(cateringForm.action, {
+                        method: 'POST',
+                        body: new FormData(cateringForm),
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+
+                    const result = await response.json().catch(() => ({}));
+
+                    if (!response.ok || result.ok === false) {
+                        const firstError = result && Array.isArray(result.errors) && result.errors.length > 0
+                            ? result.errors[0].message
+                            : 'Form submission failed';
+                        throw new Error(firstError);
+                    }
+
+                    alert('Thanks for contacting Red River BBQ about Catering. Our team will follow up shortly.');
+                    cateringForm.reset();
+                    closeCateringModal();
+                } catch (error) {
+                    console.error('Catering form submission error:', error);
+                    alert('There was a problem submitting your request: ' + error.message);
+                } finally {
+                    if (submitButton) {
+                        submitButton.disabled = false;
+                        submitButton.textContent = originalButtonText;
+                    }
+                }
+            });
         }
 
         // Carousel functionality
