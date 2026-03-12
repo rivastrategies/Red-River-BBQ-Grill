@@ -815,7 +815,7 @@
                     </p>
                 </div>
 
-                <form id="careerForm" class="reveal">
+                <form id="careerForm" class="reveal" method="POST" action="https://formspree.io/f/mqeybqnb">
                     <!-- PERSONAL INFORMATION -->
                     <div class="form-section">
                         <div class="form-section-title">Personal Information</div>
@@ -953,13 +953,6 @@
                             <input type="text" id="howHeard" name="howHeard" placeholder="How did you hear about us?">
                         </div>
 
-                        <div class="form-group full">
-                            <label for="location">Which location are you applying for? *</label>
-                            <select id="location" name="location" required>
-                                <option value="">Select Location</option>
-                                <option value="league-city">League City</option>
-                            </select>
-                        </div>
                     </div>
 
                     <!-- EMPLOYMENT HISTORY -->
@@ -1300,6 +1293,9 @@
                         </div>
                     </div>
 
+                    <input type="hidden" name="_subject" value="Red River BBQ Careers Application">
+                    <input type="hidden" name="_autoresponse" value="Thanks for contacting Red River BBQ about Careers. Our team will follow up shortly.">
+
                     <!-- FORM ACTIONS -->
                     <div class="form-actions">
                         <button type="submit" class="submit-btn">
@@ -1541,11 +1537,44 @@
         });
 
         // ===== Form Submission =====
-        document.getElementById('careerForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your application! We will review it and contact you soon.');
-            this.reset();
-        });
+        const careerForm = document.getElementById('careerForm');
+        if (careerForm) {
+            careerForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+
+                const submitButton = careerForm.querySelector('button[type="submit"]');
+                const originalButtonText = submitButton ? submitButton.textContent : '';
+
+                try {
+                    if (submitButton) {
+                        submitButton.disabled = true;
+                        submitButton.textContent = 'Submitting...';
+                    }
+
+                    const response = await fetch(careerForm.action, {
+                        method: 'POST',
+                        body: new FormData(careerForm),
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+
+                    if (!response.ok) {
+                        throw new Error('Form submission failed');
+                    }
+
+                    alert('Thanks for contacting Red River BBQ about Careers. Our team will follow up shortly.');
+                    careerForm.reset();
+                } catch (error) {
+                    alert('There was a problem submitting your request. Please try again in a moment.');
+                } finally {
+                    if (submitButton) {
+                        submitButton.disabled = false;
+                        submitButton.textContent = originalButtonText;
+                    }
+                }
+            });
+        }
     </script>
     <!-- Sticky Order Online Button -->
     <div class="fixed bottom-6 right-6 z-50 group">

@@ -951,15 +951,6 @@
             <!-- Form Content -->
             <div class="p-8">
                 <form id="partyRoomForm" method="POST" action="https://formspree.io/f/xreykepv">
-                    <!-- LOCATION -->
-                    <div style="margin-bottom: 1.5rem;">
-                        <label style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: #333;" for="partyLocation">Location *</label>
-                        <select style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 0.375rem; font-size: 1rem;" id="partyLocation" name="location" required>
-                            <option value="">Select Location</option>
-                            <option value="league-city">League City</option>
-                        </select>
-                    </div>
-
                     <!-- NAME FIELDS -->
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
                         <div>
@@ -1021,7 +1012,6 @@
                     </div>
 
                     <input type="hidden" name="_subject" value="Red River BBQ Party Room Inquiry">
-                    <input type="hidden" name="_next" value="https://redriverbbq.com/thank-you.html">
                     <input type="hidden" name="_autoresponse" value="Thanks for contacting Red River BBQ about the Party Room. Our team will follow up shortly.">
 
                     <!-- SUBMIT BUTTON -->
@@ -1062,6 +1052,47 @@
         function closePartyRoomModal() {
             document.getElementById('partyRoomModal').classList.add('hidden');
             document.body.style.overflow = '';
+        }
+
+        // Submit Party Room form without redirect and show a simple success popup.
+        const partyRoomForm = document.getElementById('partyRoomForm');
+        if (partyRoomForm) {
+            partyRoomForm.addEventListener('submit', async (event) => {
+                event.preventDefault();
+
+                const submitButton = partyRoomForm.querySelector('button[type="submit"]');
+                const originalButtonText = submitButton ? submitButton.textContent : '';
+
+                try {
+                    if (submitButton) {
+                        submitButton.disabled = true;
+                        submitButton.textContent = 'Submitting...';
+                    }
+
+                    const response = await fetch(partyRoomForm.action, {
+                        method: 'POST',
+                        body: new FormData(partyRoomForm),
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+
+                    if (!response.ok) {
+                        throw new Error('Form submission failed');
+                    }
+
+                    alert('Thanks for contacting Red River BBQ about the Party Room. Our team will follow up shortly.');
+                    partyRoomForm.reset();
+                    closePartyRoomModal();
+                } catch (error) {
+                    alert('There was a problem submitting your request. Please try again in a moment.');
+                } finally {
+                    if (submitButton) {
+                        submitButton.disabled = false;
+                        submitButton.textContent = originalButtonText;
+                    }
+                }
+            });
         }
 
         // Close modal on escape key

@@ -149,7 +149,6 @@
             position: relative;
             overflow: hidden;
             transition: all 0.3s ease;
-            background: linear-gradient(135deg, #cc0000 0%, #880000 100%);
         }
         .btn-modern::before {
             content: '';
@@ -497,7 +496,7 @@
 
                 <!-- HTML Form -->
                 <div class="reveal max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg">
-                    <form id="spiritDaysForm" method="POST" action="#">
+                    <form id="spiritDaysForm" method="POST" action="https://formspree.io/f/xvzwrawj">
                         <!-- ORGANIZATION INFORMATION -->
                         <div class="form-section" style="margin-bottom: 2rem;">
                             <div style="font-size: 1.25rem; font-weight: bold; color: #333; margin-bottom: 1.5rem; padding-bottom: 0.75rem; border-bottom: 2px solid #cc0000;" class="form-section-title">Organization Information</div>
@@ -561,19 +560,9 @@
                         <div class="form-section" style="margin-bottom: 2rem;">
                             <div style="font-size: 1.25rem; font-weight: bold; color: #333; margin-bottom: 1.5rem; padding-bottom: 0.75rem; border-bottom: 2px solid #cc0000;" class="form-section-title">Event Details</div>
 
-                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
-                                <div>
-                                    <label style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: #333;" for="eventDate">Preferred Event Date *</label>
-                                    <input style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 0.375rem; font-size: 1rem;" type="date" id="eventDate" name="eventDate" required>
-                                </div>
-                                <div>
-                                    <label style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: #333;" for="location">Location Preference *</label>
-                                    <select style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 0.375rem; font-size: 1rem;" id="location" name="location" required>
-                                        <option value="">Select Location</option>
-                                        <option value="league-city">League City</option>
-                                        <option value="katy">Katy</option>
-                                    </select>
-                                </div>
+                            <div style="margin-bottom: 1.5rem;">
+                                <label style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: #333;" for="eventDate">Preferred Event Date *</label>
+                                <input style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 0.375rem; font-size: 1rem;" type="date" id="eventDate" name="eventDate" required>
                             </div>
 
                             <div style="margin-bottom: 1.5rem;">
@@ -591,6 +580,9 @@
                                 <label style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: #333;" for="notes">Additional Notes</label>
                                 <textarea style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 0.375rem; font-size: 1rem; min-height: 120px;" id="notes" name="notes" placeholder="Tell us more about your Spirit Days event"></textarea>
                             </div>
+
+                            <input type="hidden" name="_subject" value="Red River BBQ Spirit Days Application">
+                            <input type="hidden" name="_autoresponse" value="Thanks for contacting Red River BBQ about Spirit Days. Our team will follow up shortly.">
                         </div>
 
                         <!-- SUBMIT BUTTON -->
@@ -787,6 +779,46 @@
         function closeOrderModal() {
             document.getElementById('orderModal').classList.add('hidden');
             document.body.style.overflow = '';
+        }
+
+        // Submit Spirit Days form without redirect and show a simple success popup.
+        const spiritDaysForm = document.getElementById('spiritDaysForm');
+        if (spiritDaysForm) {
+            spiritDaysForm.addEventListener('submit', async (event) => {
+                event.preventDefault();
+
+                const submitButton = spiritDaysForm.querySelector('button[type="submit"]');
+                const originalButtonText = submitButton ? submitButton.textContent : '';
+
+                try {
+                    if (submitButton) {
+                        submitButton.disabled = true;
+                        submitButton.textContent = 'Submitting...';
+                    }
+
+                    const response = await fetch(spiritDaysForm.action, {
+                        method: 'POST',
+                        body: new FormData(spiritDaysForm),
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+
+                    if (!response.ok) {
+                        throw new Error('Form submission failed');
+                    }
+
+                    alert('Thanks for contacting Red River BBQ about Spirit Days. Our team will follow up shortly.');
+                    spiritDaysForm.reset();
+                } catch (error) {
+                    alert('There was a problem submitting your request. Please try again in a moment.');
+                } finally {
+                    if (submitButton) {
+                        submitButton.disabled = false;
+                        submitButton.textContent = originalButtonText;
+                    }
+                }
+            });
         }
 
         // Close modal on escape key
